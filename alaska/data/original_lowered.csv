@@ -1,0 +1,1137 @@
+,mnemonics,description,units,label
+0,c1,caliper 1,in,caliper
+1,c1,caliper 1,inch,caliper
+2,c1,caliper 1,mm,caliper
+3,c1,caliper 1,millimeter,caliper
+4,c2,caliper 2,in,caliper
+5,c2,caliper 2,inch,caliper
+6,c2,caliper 2,mm,caliper
+7,c2,caliper 2,millimeter,caliper
+8,cal,calibration curve,none,caliper
+9,cal1,caliper 1,in,caliper
+10,cal1,caliper 1,inch,caliper
+11,cal1,caliper 1,mm,caliper
+12,cal1,caliper 1,millimeter,caliper
+13,cal2,caliper 2,in,caliper
+14,cal2,caliper 2,inch,caliper
+15,cal2,caliper 2,mm,caliper
+16,cal2,caliper 2,millimeter,caliper
+17,cal3,caliper 3,in,caliper
+18,cal3,caliper 3,inch,caliper
+19,cal3,caliper 3,mm,caliper
+20,cal3,caliper 3,millimeter,caliper
+21,cala,calibration waveform amplitude,mv,caliper
+22,cala,calibration waveform amplitude,megavolt,caliper
+23,cala,calibration waveform amplitude,millivolt,caliper
+24,cala,calibration waveform amplitude,uv,caliper
+25,cala,calibration waveform amplitude,microvolt,caliper
+26,cale,borehole diameter from electrical caliper,in,caliper
+27,cale,borehole diameter from electrical caliper,inch,caliper
+28,cale,borehole diameter from electrical caliper,mm,caliper
+29,cale,borehole diameter from electrical caliper,millimeter,caliper
+30,cali,caliper,in,caliper
+31,cali,caliper,inch,caliper
+32,cali,caliper,mm,caliper
+33,cali,caliper,millimeter,caliper
+34,cali_spcs,spcs fully calibrated caliper,in,caliper
+35,cali_spcs,spcs fully calibrated caliper,inch,caliper
+36,cali_spcs,spcs fully calibrated caliper,mm,caliper
+37,cali_spcs,spcs fully calibrated caliper,millimeter,caliper
+38,cals,micro resistivity caliper,in,caliper
+39,cals,micro resistivity caliper,inch,caliper
+40,cals,micro resistivity caliper,mm,caliper
+41,cals,micro resistivity caliper,millimeter,caliper
+42,calx,second caliper,in,caliper
+43,calx,second caliper,inch,caliper
+44,calx,second caliper,mm,caliper
+45,calx,second caliper,millimeter,caliper
+46,dcal,differential caliper,in,caliper
+47,dcal,differential caliper,inch,caliper
+48,dcal,differential caliper,mm,caliper
+49,dcal,differential caliper,millimeter,caliper
+50,hcal,hrcc caliper calibrated,in,caliper
+51,hcal,hrcc caliper calibrated,inch,caliper
+52,hcal,hrcc caliper calibrated,mm,caliper
+53,hcal,hrcc caliper calibrated,millimeter,caliper
+54,hd,hole diameter,in,caliper
+55,hd,hole diameter,inch,caliper
+56,hd,hole diameter,mm,caliper
+57,hd,hole diameter,millimeter,caliper
+58,hd1,hole diameter 1,in,caliper
+59,hd1,hole diameter 1,inch,caliper
+60,hd1,hole diameter 1,mm,caliper
+61,hd1,hole diameter 1,millimeter,caliper
+62,hd2,hole diameter 2,in,caliper
+63,hd2,hole diameter 2,inch,caliper
+64,hd2,hole diameter 2,mm,caliper
+65,hd2,hole diameter 2,millimeter,caliper
+66,hd3,hole diameter 3,in,caliper
+67,hd3,hole diameter 3,inch,caliper
+68,hd3,hole diameter 3,mm,caliper
+69,hd3,hole diameter 3,millimeter,caliper
+70,hdar,hole diameter from area,in,caliper
+71,hdar,hole diameter from area,inch,caliper
+72,hdar,hole diameter from area,mm,caliper
+73,hdar,hole diameter from area,millimeter,caliper
+74,hdia,hole diameter,in,caliper
+75,hdia,hole diameter,inch,caliper
+76,hdia,hole diameter,mm,caliper
+77,hdia,hole diameter,millimeter,caliper
+78,hdmi,hole diameter minimum,in,caliper
+79,hdmi,hole diameter minimum,inch,caliper
+80,hdmi,hole diameter minimum,mm,caliper
+81,hdmi,hole diameter minimum,millimeter,caliper
+82,hdmx,hole diameter maximum,in,caliper
+83,hdmx,hole diameter maximum,inch,caliper
+84,hdmx,hole diameter maximum,mm,caliper
+85,hdmx,hole diameter maximum,millimeter,caliper
+86,hlca,high resolution caliper,in,caliper
+87,hlca,high resolution caliper,inch,caliper
+88,hlca,high resolution caliper,mm,caliper
+89,hlca,high resolution caliper,millimeter,caliper
+90,lcal,density caliper,in,caliper
+91,lcal,density caliper,inch,caliper
+92,lcal,density caliper,mm,caliper
+93,lcal,density caliper,millimeter,caliper
+94,mcal,mlt (microlog) caliper,in,caliper
+95,mcal,mlt (microlog) caliper,inch,caliper
+96,mcal,mlt (microlog) caliper,mm,caliper
+97,mcal,mlt (microlog) caliper,millimeter,caliper
+98,sa,short arm caliper,in,caliper
+99,sa,short arm caliper,inch,caliper
+100,sa,short arm caliper,mm,caliper
+101,sa,short arm caliper,millimeter,caliper
+102,c3,double r1 radius (hdt),in,caliper
+103,c3,double r1 radius (hdt),inch,caliper
+104,c3,double r1 radius (hdt),mm,caliper
+105,c3,double r1 radius (hdt),millimeter,caliper
+106,drh,bulk density correction,g/cm3,density correction
+107,drh,bulk density correction,gram per cubic centimeter,density correction
+108,drh,bulk density correction,kg/m3,density correction
+109,drh,bulk density correction,kilogram per cubic meter,density correction
+110,drho,bulk density correction,g/cm3,density correction
+111,drho,bulk density correction,gram per cubic centimeter,density correction
+112,drho,bulk density correction,kg/m3,density correction
+113,drho,bulk density correction,kilogram per cubic meter,density correction
+114,hbdc,high resolution bulk density correction,g/cm3,density correction
+115,hbdc,high resolution bulk density correction,gram per cubic centimeter,density correction
+116,hbdc,high resolution bulk density correction,kg/m3,density correction
+117,hbdc,high resolution bulk density correction,kilogram per cubic meter,density correction
+118,hdra,density standoff correction,g/cm3,density correction
+119,hdra,density standoff correction,gram per cubic centimeter,density correction
+120,hdra,density standoff correction,kg/m3,density correction
+121,hdra,density standoff correction,kilogram per cubic meter,density correction
+122,hdrh,high resolution density correction,g/cm3,density correction
+123,hdrh,high resolution density correction,gram per cubic centimeter,density correction
+124,hdrh,high resolution density correction,kg/m3,density correction
+125,hdrh,high resolution density correction,kilogram per cubic meter,density correction
+126,hdrh,high resolution density correction,g/cm3,caliper
+127,hdrh,high resolution density correction,gram per cubic centimeter,caliper
+128,hdrh,high resolution density correction,kg/m3,caliper
+129,hdrh,high resolution density correction,kilogram per cubic meter,caliper
+130,dt,delta-t (also called slowness or interval transit time),us/ft,sonic travel time
+131,dt,delta-t (also called slowness or interval transit time),microsecond per foot,sonic travel time
+132,dt,delta-t (also called slowness or interval transit time),us/m,sonic travel time
+133,dt,delta-t (also called slowness or interval transit time),microsecond per meter,sonic travel time
+134,dt4p,delta-t compressional - monopole p&amp;s,us/ft,sonic travel time
+135,dt4p,delta-t compressional - monopole p&amp;s,microsecond per foot,sonic travel time
+136,dt4p,delta-t compressional - monopole p&amp;s,us/m,sonic travel time
+137,dt4p,delta-t compressional - monopole p&amp;s,microsecond per meter,sonic travel time
+138,dt5,"delta-t compressional, ddbhc - fmd",us/ft,sonic travel time
+139,dt5,"delta-t compressional, ddbhc - fmd",microsecond per foot,sonic travel time
+140,dt5,"delta-t compressional, ddbhc - fmd",us/m,sonic travel time
+141,dt5,"delta-t compressional, ddbhc - fmd",microsecond per meter,sonic travel time
+142,dtc,delta-t time corrected,us/ft,sonic travel time
+143,dtc,delta-t time corrected,microsecond per foot,sonic travel time
+144,dtc,delta-t time corrected,us/m,sonic travel time
+145,dtc,delta-t time corrected,microsecond per meter,sonic travel time
+146,dtco,delta-t compressional,us/ft,sonic travel time
+147,dtco,delta-t compressional,microsecond per foot,sonic travel time
+148,dtco,delta-t compressional,us/m,sonic travel time
+149,dtco,delta-t compressional,microsecond per meter,sonic travel time
+150,dtl,delta-t long spacing,us/ft,sonic travel time
+151,dtl,delta-t long spacing,microsecond per foot,sonic travel time
+152,dtl,delta-t long spacing,us/m,sonic travel time
+153,dtl,delta-t long spacing,microsecond per meter,sonic travel time
+154,dtlf,delta-t long spacing far,us/ft,sonic travel time
+155,dtlf,delta-t long spacing far,microsecond per foot,sonic travel time
+156,dtlf,delta-t long spacing far,us/m,sonic travel time
+157,dtlf,delta-t long spacing far,microsecond per meter,sonic travel time
+158,dtmx,dt matrix,us/ft,sonic travel time
+159,dtmx,dt matrix,microsecond per foot,sonic travel time
+160,dtmx,dt matrix,us/m,sonic travel time
+161,dtmx,dt matrix,microsecond per meter,sonic travel time
+162,dtp,measure of dt plus sqrt(sigma**2+tau**2),us/ft,sonic travel time
+163,dtp,measure of dt plus sqrt(sigma**2+tau**2),microsecond per foot,sonic travel time
+164,dtp,measure of dt plus sqrt(sigma**2+tau**2),us/m,sonic travel time
+165,dtp,measure of dt plus sqrt(sigma**2+tau**2),microsecond per meter,sonic travel time
+166,dtsc,delta-t short spacing compressional,us/ft,sonic travel time
+167,dtsc,delta-t short spacing compressional,microsecond per foot,sonic travel time
+168,dtsc,delta-t short spacing compressional,us/m,sonic travel time
+169,dtsc,delta-t short spacing compressional,microsecond per meter,sonic travel time
+170,ac1,averaged channel 1,none,sonic travel time
+171,dt4s,delta-t shear - monopole p&amp;s,us/ft,shear sonic
+172,dt4s,delta-t shear - monopole p&amp;s,microsecond per foot,shear sonic
+173,dt4s,delta-t shear - monopole p&amp;s,us/m,shear sonic
+174,dt4s,delta-t shear - monopole p&amp;s,microsecond per meter,shear sonic
+175,sphi,sonic porosity,%,sonic porosity
+176,sphi,sonic porosity,percent,sonic porosity
+177,sphi,sonic porosity,ft3/ft3,sonic porosity
+178,sphi,sonic porosity,cubic foot per cubic foot,sonic porosity
+179,sphi,sonic porosity,m3/m3,sonic porosity
+180,sphi,sonic porosity,cubic meter per cubic meter,sonic porosity
+181,sphi,sonic porosity,pu,sonic porosity
+182,sphi,sonic porosity,porosity unit,sonic porosity
+183,tphi,thermal decay porosity,%,sonic porosity
+184,tphi,thermal decay porosity,percent,sonic porosity
+185,tphi,thermal decay porosity,ft3/ft3,sonic porosity
+186,tphi,thermal decay porosity,cubic foot per cubic foot,sonic porosity
+187,tphi,thermal decay porosity,m3/m3,sonic porosity
+188,tphi,thermal decay porosity,cubic meter per cubic meter,sonic porosity
+189,tphi,thermal decay porosity,pu,sonic porosity
+190,tphi,thermal decay porosity,porosity unit,sonic porosity
+191,cgr,gamma ray contribution from thorium and potassium,gapi,gamma ray
+192,cgr,gamma ray contribution from thorium and potassium,api gamma ray,gamma ray
+193,ecgr,environmentally corrected gamma ray,gapi,gamma ray
+194,ecgr,environmentally corrected gamma ray,api gamma ray,gamma ray
+195,ehgr,high resolution corrected gamma ray,gapi,gamma ray
+196,ehgr,high resolution corrected gamma ray,api gamma ray,gamma ray
+197,g,shear modulus,kpa,gamma ray
+198,g,shear modulus,1000 pa,gamma ray
+199,g,shear modulus,kilopascal,gamma ray
+200,g,shear modulus,psi,gamma ray
+201,g,shear modulus,lbf/in2,gamma ray
+202,g,shear modulus,pound per square inch,gamma ray
+203,gr,gamma ray,gapi,gamma ray
+204,gr,gamma ray,api gamma ray,gamma ray
+205,gr,gamma ray,gapi,gamma ray
+206,gr,gamma ray,api gamma ray,gamma ray
+207,gr_arc_filt,"arc calibrated, filtered gamma ray",gapi,gamma ray
+208,gr_arc_filt,"arc calibrated, filtered gamma ray",api gamma ray,gamma ray
+209,gr_stgc,gamma ray,gapi,gamma ray
+210,gr_stgc,gamma ray,api gamma ray,gamma ray
+211,gr1,gamma ray 1,1/s,gamma ray
+212,gr1,gamma ray 1,items per second,gamma ray
+213,gr2,gamma ray 2,1/s,gamma ray
+214,gr2,gamma ray 2,items per second,gamma ray
+215,grc,borehole-corrected gamma ray,1/s,gamma ray
+216,grc,borehole-corrected gamma ray,items per second,gamma ray
+217,grco,contact resistance g,ohm,gamma ray
+218,grco,contact resistance g,v/a,gamma ray
+219,grde,gradiomanometer reference density,g/cm3,gamma ray
+220,grde,gradiomanometer reference density,gram per cubic centimeter,gamma ray
+221,grde,gradiomanometer reference density,kg/m3,gamma ray
+222,grde,gradiomanometer reference density,kilogram per cubic meter,gamma ray
+223,grml,"gamma ray, left",gapi,gamma ray
+224,grml,"gamma ray, left",api gamma ray,gamma ray
+225,grn,measure of gr minus sqrt(sigma**2+tau**2),gapi,gamma ray
+226,grn,measure of gr minus sqrt(sigma**2+tau**2),api gamma ray,gamma ray
+227,grp,value of gr plus sqrt(sigma**2+tau**2),gapi,gamma ray
+228,grp,value of gr plus sqrt(sigma**2+tau**2),api gamma ray,gamma ray
+229,grr,raw gamma ray,1/s,gamma ray
+230,grr,raw gamma ray,items per second,gamma ray
+231,hcgr,hngs computed gamma ray,gapi,gamma ray
+232,hcgr,hngs computed gamma ray,api gamma ray,gamma ray
+233,hgr,high resolution gamma ray,gapi,gamma ray
+234,hgr,high resolution gamma ray,api gamma ray,gamma ray
+235,hgr_stgc,high resolution gamma ray,gapi,gamma ray
+236,hgr_stgc,high resolution gamma ray,api gamma ray,gamma ray
+237,hsgr,hngs standard gamma-ray,gapi,gamma ray
+238,hsgr,hngs standard gamma-ray,api gamma ray,gamma ray
+239,mgr,modulated gr,gapi,gamma ray
+240,mgr,modulated gr,api gamma ray,gamma ray
+241,p01lgr,gamma ray [01],gapi,gamma ray
+242,p01lgr,gamma ray [01],api gamma ray,gamma ray
+243,p02lgr,gamma ray [02],gapi,gamma ray
+244,p02lgr,gamma ray [02],api gamma ray,gamma ray
+245,p03lgr,gamma ray [03],gapi,gamma ray
+246,p03lgr,gamma ray [03],api gamma ray,gamma ray
+247,rgr,raw gamma ray,gapi,gamma ray
+248,rgr,raw gamma ray,api gamma ray,gamma ray
+249,sgr,spectroscopy gamma ray,gapi,gamma ray
+250,sgr,spectroscopy gamma ray,api gamma ray,gamma ray
+251,grm1,borehole-corrected gamma ray (api-units),gapi,gamma ray
+252,grm1,borehole-corrected gamma ray (api-units),api gamma ray,gamma ray
+253,pota,potassium concentration,%,spectral gamma ray
+254,pota,potassium concentration,percent,spectral gamma ray
+255,hpot,hdt voltage,none,spectral gamma ray
+256,th,"root mean square of hy, hz",none,spectral gamma ray
+257,htho,hngs formation thorium concentration,ppm,spectral gamma ray
+258,htho,hngs formation thorium concentration,part per million,spectral gamma ray
+259,thor,thorium concentration,ppm,spectral gamma ray
+260,thor,thorium concentration,part per million,spectral gamma ray
+261,hura,hngs formation uranium concentration,ppm,spectral gamma ray
+262,hura,hngs formation uranium concentration,part per million,spectral gamma ray
+263,u,volumetric photoelectric factor,none,spectral gamma ray
+264,uran,uranium concentration,ppm,spectral gamma ray
+265,uran,uranium concentration,part per million,spectral gamma ray
+266,uz,volumetric photoelectric factor,none,spectral gamma ray
+267,apsc,near/array corrected sandstone porosity,%,density porosity
+268,apsc,near/array corrected sandstone porosity,percent,density porosity
+269,apsc,near/array corrected sandstone porosity,ft3/ft3,density porosity
+270,apsc,near/array corrected sandstone porosity,cubic foot per cubic foot,density porosity
+271,apsc,near/array corrected sandstone porosity,m3/m3,density porosity
+272,apsc,near/array corrected sandstone porosity,cubic meter per cubic meter,density porosity
+273,apsc,near/array corrected sandstone porosity,pu,density porosity
+274,apsc,near/array corrected sandstone porosity,porosity unit,density porosity
+275,dnph,difference between corrected thermal neutron porosity and uncorrected,%,density porosity
+276,dnph,difference between corrected thermal neutron porosity and uncorrected,percent,density porosity
+277,dnph,difference between corrected thermal neutron porosity and uncorrected,ft3/ft3,density porosity
+278,dnph,difference between corrected thermal neutron porosity and uncorrected,cubic foot per cubic foot,density porosity
+279,dnph,difference between corrected thermal neutron porosity and uncorrected,m3/m3,density porosity
+280,dnph,difference between corrected thermal neutron porosity and uncorrected,cubic meter per cubic meter,density porosity
+281,dnph,difference between corrected thermal neutron porosity and uncorrected,pu,density porosity
+282,dnph,difference between corrected thermal neutron porosity and uncorrected,porosity unit,density porosity
+283,dph8,high resolution density porosity,%,density porosity
+284,dph8,high resolution density porosity,percent,density porosity
+285,dph8,high resolution density porosity,ft3/ft3,density porosity
+286,dph8,high resolution density porosity,cubic foot per cubic foot,density porosity
+287,dph8,high resolution density porosity,m3/m3,density porosity
+288,dph8,high resolution density porosity,cubic meter per cubic meter,density porosity
+289,dph8,high resolution density porosity,pu,density porosity
+290,dph8,high resolution density porosity,porosity unit,density porosity
+291,dphi,density porosity,%,density porosity
+292,dphi,density porosity,percent,density porosity
+293,dphi,density porosity,ft3/ft3,density porosity
+294,dphi,density porosity,cubic foot per cubic foot,density porosity
+295,dphi,density porosity,m3/m3,density porosity
+296,dphi,density porosity,cubic meter per cubic meter,density porosity
+297,dphi,density porosity,pu,density porosity
+298,dphi,density porosity,porosity unit,density porosity
+299,dphi_san,density porosity (matrix sandstone),%,density porosity
+300,dphi_san,density porosity (matrix sandstone),percent,density porosity
+301,dphi_san,density porosity (matrix sandstone),ft3/ft3,density porosity
+302,dphi_san,density porosity (matrix sandstone),cubic foot per cubic foot,density porosity
+303,dphi_san,density porosity (matrix sandstone),m3/m3,density porosity
+304,dphi_san,density porosity (matrix sandstone),cubic meter per cubic meter,density porosity
+305,dphi_san,density porosity (matrix sandstone),pu,density porosity
+306,dphi_san,density porosity (matrix sandstone),porosity unit,density porosity
+307,dphi_sldt,sldt/qldt density porosity,%,density porosity
+308,dphi_sldt,sldt/qldt density porosity,percent,density porosity
+309,dphi_sldt,sldt/qldt density porosity,ft3/ft3,density porosity
+310,dphi_sldt,sldt/qldt density porosity,cubic foot per cubic foot,density porosity
+311,dphi_sldt,sldt/qldt density porosity,m3/m3,density porosity
+312,dphi_sldt,sldt/qldt density porosity,cubic meter per cubic meter,density porosity
+313,dphi_sldt,sldt/qldt density porosity,pu,density porosity
+314,dphi_sldt,sldt/qldt density porosity,porosity unit,density porosity
+315,dphi_sldt_hr,sldt/qldt high resolution density porosity,%,density porosity
+316,dphi_sldt_hr,sldt/qldt high resolution density porosity,percent,density porosity
+317,dphi_sldt_hr,sldt/qldt high resolution density porosity,ft3/ft3,density porosity
+318,dphi_sldt_hr,sldt/qldt high resolution density porosity,cubic foot per cubic foot,density porosity
+319,dphi_sldt_hr,sldt/qldt high resolution density porosity,m3/m3,density porosity
+320,dphi_sldt_hr,sldt/qldt high resolution density porosity,cubic meter per cubic meter,density porosity
+321,dphi_sldt_hr,sldt/qldt high resolution density porosity,pu,density porosity
+322,dphi_sldt_hr,sldt/qldt high resolution density porosity,porosity unit,density porosity
+323,dphz,standard resolution density porosity,%,density porosity
+324,dphz,standard resolution density porosity,percent,density porosity
+325,dphz,standard resolution density porosity,ft3/ft3,density porosity
+326,dphz,standard resolution density porosity,cubic foot per cubic foot,density porosity
+327,dphz,standard resolution density porosity,m3/m3,density porosity
+328,dphz,standard resolution density porosity,cubic meter per cubic meter,density porosity
+329,dphz,standard resolution density porosity,pu,density porosity
+330,dphz,standard resolution density porosity,porosity unit,density porosity
+331,dpo,density porosity,%,density porosity
+332,dpo,density porosity,percent,density porosity
+333,dpo,density porosity,ft3/ft3,density porosity
+334,dpo,density porosity,cubic foot per cubic foot,density porosity
+335,dpo,density porosity,m3/m3,density porosity
+336,dpo,density porosity,cubic meter per cubic meter,density porosity
+337,dpo,density porosity,pu,density porosity
+338,dpo,density porosity,porosity unit,density porosity
+339,dpor,density porosity,%,density porosity
+340,dpor,density porosity,percent,density porosity
+341,dpor,density porosity,ft3/ft3,density porosity
+342,dpor,density porosity,cubic foot per cubic foot,density porosity
+343,dpor,density porosity,m3/m3,density porosity
+344,dpor,density porosity,cubic meter per cubic meter,density porosity
+345,dpor,density porosity,pu,density porosity
+346,dpor,density porosity,porosity unit,density porosity
+347,dpss,short spacing dead time pulse countrate,1/s,density porosity
+348,dpss,short spacing dead time pulse countrate,items per second,density porosity
+349,hdph,high resolution density porosity,%,density porosity
+350,hdph,high resolution density porosity,percent,density porosity
+351,hdph,high resolution density porosity,ft3/ft3,density porosity
+352,hdph,high resolution density porosity,cubic foot per cubic foot,density porosity
+353,hdph,high resolution density porosity,m3/m3,density porosity
+354,hdph,high resolution density porosity,cubic meter per cubic meter,density porosity
+355,hdph,high resolution density porosity,pu,density porosity
+356,hdph,high resolution density porosity,porosity unit,density porosity
+357,hdph_san,hires density porosity (matrix sandstone),%,density porosity
+358,hdph_san,hires density porosity (matrix sandstone),percent,density porosity
+359,hdph_san,hires density porosity (matrix sandstone),ft3/ft3,density porosity
+360,hdph_san,hires density porosity (matrix sandstone),cubic foot per cubic foot,density porosity
+361,hdph_san,hires density porosity (matrix sandstone),m3/m3,density porosity
+362,hdph_san,hires density porosity (matrix sandstone),cubic meter per cubic meter,density porosity
+363,hdph_san,hires density porosity (matrix sandstone),pu,density porosity
+364,hdph_san,hires density porosity (matrix sandstone),porosity unit,density porosity
+365,hdpo,high resolution density porosity,%,density porosity
+366,hdpo,high resolution density porosity,percent,density porosity
+367,hdpo,high resolution density porosity,ft3/ft3,density porosity
+368,hdpo,high resolution density porosity,cubic foot per cubic foot,density porosity
+369,hdpo,high resolution density porosity,m3/m3,density porosity
+370,hdpo,high resolution density porosity,cubic meter per cubic meter,density porosity
+371,hdpo,high resolution density porosity,pu,density porosity
+372,hdpo,high resolution density porosity,porosity unit,density porosity
+373,hfsc,aps high resolution near/far corrected sandstone porosity,%,density porosity
+374,hfsc,aps high resolution near/far corrected sandstone porosity,percent,density porosity
+375,hfsc,aps high resolution near/far corrected sandstone porosity,ft3/ft3,density porosity
+376,hfsc,aps high resolution near/far corrected sandstone porosity,cubic foot per cubic foot,density porosity
+377,hfsc,aps high resolution near/far corrected sandstone porosity,m3/m3,density porosity
+378,hfsc,aps high resolution near/far corrected sandstone porosity,cubic meter per cubic meter,density porosity
+379,hfsc,aps high resolution near/far corrected sandstone porosity,pu,density porosity
+380,hfsc,aps high resolution near/far corrected sandstone porosity,porosity unit,density porosity
+381,ndph,enhanced resolution density porosity,%,density porosity
+382,ndph,enhanced resolution density porosity,percent,density porosity
+383,ndph,enhanced resolution density porosity,ft3/ft3,density porosity
+384,ndph,enhanced resolution density porosity,cubic foot per cubic foot,density porosity
+385,ndph,enhanced resolution density porosity,m3/m3,density porosity
+386,ndph,enhanced resolution density porosity,cubic meter per cubic meter,density porosity
+387,ndph,enhanced resolution density porosity,pu,density porosity
+388,ndph,enhanced resolution density porosity,porosity unit,density porosity
+389,pds,density sandstone porosity,%,density porosity
+390,pds,density sandstone porosity,percent,density porosity
+391,pds,density sandstone porosity,ft3/ft3,density porosity
+392,pds,density sandstone porosity,cubic foot per cubic foot,density porosity
+393,pds,density sandstone porosity,m3/m3,density porosity
+394,pds,density sandstone porosity,cubic meter per cubic meter,density porosity
+395,pds,density sandstone porosity,pu,density porosity
+396,pds,density sandstone porosity,porosity unit,density porosity
+397,pxnd,crossplot porosity for neutron-density,%,density porosity
+398,pxnd,crossplot porosity for neutron-density,percent,density porosity
+399,pxnd,crossplot porosity for neutron-density,ft3/ft3,density porosity
+400,pxnd,crossplot porosity for neutron-density,cubic foot per cubic foot,density porosity
+401,pxnd,crossplot porosity for neutron-density,m3/m3,density porosity
+402,pxnd,crossplot porosity for neutron-density,cubic meter per cubic meter,density porosity
+403,pxnd,crossplot porosity for neutron-density,pu,density porosity
+404,pxnd,crossplot porosity for neutron-density,porosity unit,density porosity
+405,den,density of correlated events (synthetic log from geodip),none,density porosity
+406,denb,dpt epsilon near after bed boundary process,none,density porosity
+407,hndp,high resolution enhanced resolution density porosity,%,density porosity
+408,hndp,high resolution enhanced resolution density porosity,percent,density porosity
+409,hndp,high resolution enhanced resolution density porosity,ft3/ft3,density porosity
+410,hndp,high resolution enhanced resolution density porosity,cubic foot per cubic foot,density porosity
+411,hndp,high resolution enhanced resolution density porosity,m3/m3,density porosity
+412,hndp,high resolution enhanced resolution density porosity,cubic meter per cubic meter,density porosity
+413,hndp,high resolution enhanced resolution density porosity,pu,density porosity
+414,hndp,high resolution enhanced resolution density porosity,porosity unit,density porosity
+415,hrho,high resolution bulk density,g/cm3,bulk density
+416,hrho,high resolution bulk density,gram per cubic centimeter,bulk density
+417,hrho,high resolution bulk density,kg/m3,bulk density
+418,hrho,high resolution bulk density,kilogram per cubic meter,bulk density
+419,hrom,high resolution corrected bulk density,g/cm3,bulk density
+420,hrom,high resolution corrected bulk density,gram per cubic centimeter,bulk density
+421,hrom,high resolution corrected bulk density,kg/m3,bulk density
+422,hrom,high resolution corrected bulk density,kilogram per cubic meter,bulk density
+423,nrhb,enhanced resolution bulk density,g/cm3,bulk density
+424,nrhb,enhanced resolution bulk density,gram per cubic centimeter,bulk density
+425,nrhb,enhanced resolution bulk density,kg/m3,bulk density
+426,nrhb,enhanced resolution bulk density,kilogram per cubic meter,bulk density
+427,nrho,"bulk density, enhanced vertical resolution",g/cm3,bulk density
+428,nrho,"bulk density, enhanced vertical resolution",gram per cubic centimeter,bulk density
+429,nrho,"bulk density, enhanced vertical resolution",kg/m3,bulk density
+430,nrho,"bulk density, enhanced vertical resolution",kilogram per cubic meter,bulk density
+431,rho8,high resolution formation density,g/cm3,density porosity
+432,rho8,high resolution formation density,gram per cubic centimeter,density porosity
+433,rho8,high resolution formation density,kg/m3,density porosity
+434,rho8,high resolution formation density,kilogram per cubic meter,density porosity
+435,rhob,bulk density,g/cm3,bulk density
+436,rhob,bulk density,gram per cubic centimeter,bulk density
+437,rhob,bulk density,kg/m3,bulk density
+438,rhob,bulk density,kilogram per cubic meter,bulk density
+439,rhob_sldt,sldt/qldt bulk density,g/cm3,bulk density
+440,rhob_sldt,sldt/qldt bulk density,gram per cubic centimeter,bulk density
+441,rhob_sldt,sldt/qldt bulk density,kg/m3,bulk density
+442,rhob_sldt,sldt/qldt bulk density,kilogram per cubic meter,bulk density
+443,rhoi,enhanced resolution formation density,g/cm3,density porosity
+444,rhoi,enhanced resolution formation density,gram per cubic centimeter,density porosity
+445,rhoi,enhanced resolution formation density,kg/m3,density porosity
+446,rhoi,enhanced resolution formation density,kilogram per cubic meter,density porosity
+447,rhom,corrected bulk density,g/cm3,bulk density
+448,rhom,corrected bulk density,gram per cubic centimeter,bulk density
+449,rhom,corrected bulk density,kg/m3,bulk density
+450,rhom,corrected bulk density,kilogram per cubic meter,bulk density
+451,rhos,short spacing bulk density,g/cm3,bulk density
+452,rhos,short spacing bulk density,gram per cubic centimeter,bulk density
+453,rhos,short spacing bulk density,kg/m3,bulk density
+454,rhos,short spacing bulk density,kilogram per cubic meter,bulk density
+455,rhoz,standard resolution formation density,g/cm3,density porosity
+456,rhoz,standard resolution formation density,gram per cubic centimeter,density porosity
+457,rhoz,standard resolution formation density,kg/m3,density porosity
+458,rhoz,standard resolution formation density,kilogram per cubic meter,density porosity
+459,rhl,long-spaced bulk density,g/cm3,bulk density
+460,rhl,long-spaced bulk density,gram per cubic centimeter,bulk density
+461,rhl,long-spaced bulk density,kg/m3,bulk density
+462,rhl,long-spaced bulk density,kilogram per cubic meter,bulk density
+463,rhs3,short-spaced ss2 bulk density,g/cm3,bulk density
+464,rhs3,short-spaced ss2 bulk density,gram per cubic centimeter,bulk density
+465,rhs3,short-spaced ss2 bulk density,kg/m3,bulk density
+466,rhs3,short-spaced ss2 bulk density,kilogram per cubic meter,bulk density
+467,rhs4,short-spaced ss1 bulk density,g/cm3,bulk density
+468,rhs4,short-spaced ss1 bulk density,gram per cubic centimeter,bulk density
+469,rhs4,short-spaced ss1 bulk density,kg/m3,bulk density
+470,rhs4,short-spaced ss1 bulk density,kilogram per cubic meter,bulk density
+471,dphi_dol,density porosity (matrix dolomite),%,density porosity
+472,dphi_dol,density porosity (matrix dolomite),percent,density porosity
+473,dphi_dol,density porosity (matrix dolomite),ft3/ft3,density porosity
+474,dphi_dol,density porosity (matrix dolomite),cubic foot per cubic foot,density porosity
+475,dphi_dol,density porosity (matrix dolomite),m3/m3,density porosity
+476,dphi_dol,density porosity (matrix dolomite),cubic meter per cubic meter,density porosity
+477,dphi_dol,density porosity (matrix dolomite),pu,density porosity
+478,dphi_dol,density porosity (matrix dolomite),porosity unit,density porosity
+479,dphi_lim,density porosity (matrix limestone),%,density porosity
+480,dphi_lim,density porosity (matrix limestone),percent,density porosity
+481,dphi_lim,density porosity (matrix limestone),ft3/ft3,density porosity
+482,dphi_lim,density porosity (matrix limestone),cubic foot per cubic foot,density porosity
+483,dphi_lim,density porosity (matrix limestone),m3/m3,density porosity
+484,dphi_lim,density porosity (matrix limestone),cubic meter per cubic meter,density porosity
+485,dphi_lim,density porosity (matrix limestone),pu,density porosity
+486,dphi_lim,density porosity (matrix limestone),porosity unit,density porosity
+487,dphl,density porosity from robl,%,density porosity
+488,dphl,density porosity from robl,percent,density porosity
+489,dphl,density porosity from robl,ft3/ft3,density porosity
+490,dphl,density porosity from robl,cubic foot per cubic foot,density porosity
+491,dphl,density porosity from robl,m3/m3,density porosity
+492,dphl,density porosity from robl,cubic meter per cubic meter,density porosity
+493,dphl,density porosity from robl,pu,density porosity
+494,dphl,density porosity from robl,porosity unit,density porosity
+495,dpls,long spacing dead time pulse countrate,1/s,density porosity
+496,dpls,long spacing dead time pulse countrate,items per second,density porosity
+497,hdph_dol,hires density porosity (matrix dolomite),%,density porosity
+498,hdph_dol,hires density porosity (matrix dolomite),percent,density porosity
+499,hdph_dol,hires density porosity (matrix dolomite),ft3/ft3,density porosity
+500,hdph_dol,hires density porosity (matrix dolomite),cubic foot per cubic foot,density porosity
+501,hdph_dol,hires density porosity (matrix dolomite),m3/m3,density porosity
+502,hdph_dol,hires density porosity (matrix dolomite),cubic meter per cubic meter,density porosity
+503,hdph_dol,hires density porosity (matrix dolomite),pu,density porosity
+504,hdph_dol,hires density porosity (matrix dolomite),porosity unit,density porosity
+505,hdph_lim,hires density porosity (matrix limestone),%,density porosity
+506,hdph_lim,hires density porosity (matrix limestone),percent,density porosity
+507,hdph_lim,hires density porosity (matrix limestone),ft3/ft3,density porosity
+508,hdph_lim,hires density porosity (matrix limestone),cubic foot per cubic foot,density porosity
+509,hdph_lim,hires density porosity (matrix limestone),m3/m3,density porosity
+510,hdph_lim,hires density porosity (matrix limestone),cubic meter per cubic meter,density porosity
+511,hdph_lim,hires density porosity (matrix limestone),pu,density porosity
+512,hdph_lim,hires density porosity (matrix limestone),porosity unit,density porosity
+513,hflc,aps high resolution near/far corrected limestone porosity,%,density porosity
+514,hflc,aps high resolution near/far corrected limestone porosity,percent,density porosity
+515,hflc,aps high resolution near/far corrected limestone porosity,ft3/ft3,density porosity
+516,hflc,aps high resolution near/far corrected limestone porosity,cubic foot per cubic foot,density porosity
+517,hflc,aps high resolution near/far corrected limestone porosity,m3/m3,density porosity
+518,hflc,aps high resolution near/far corrected limestone porosity,cubic meter per cubic meter,density porosity
+519,hflc,aps high resolution near/far corrected limestone porosity,pu,density porosity
+520,hflc,aps high resolution near/far corrected limestone porosity,porosity unit,density porosity
+521,pdd,density dolomite porosity,%,density porosity
+522,pdd,density dolomite porosity,percent,density porosity
+523,pdd,density dolomite porosity,ft3/ft3,density porosity
+524,pdd,density dolomite porosity,cubic foot per cubic foot,density porosity
+525,pdd,density dolomite porosity,m3/m3,density porosity
+526,pdd,density dolomite porosity,cubic meter per cubic meter,density porosity
+527,pdd,density dolomite porosity,pu,density porosity
+528,pdd,density dolomite porosity,porosity unit,density porosity
+529,pdl,density limestone porosity,%,density porosity
+530,pdl,density limestone porosity,percent,density porosity
+531,pdl,density limestone porosity,ft3/ft3,density porosity
+532,pdl,density limestone porosity,cubic foot per cubic foot,density porosity
+533,pdl,density limestone porosity,m3/m3,density porosity
+534,pdl,density limestone porosity,cubic meter per cubic meter,density porosity
+535,pdl,density limestone porosity,pu,density porosity
+536,pdl,density limestone porosity,porosity unit,density porosity
+537,cnc,ecs capture nickel-chromium relative yield,none,neutron porosity
+538,fpsc,near/far corrected sandstone porosity,%,neutron porosity
+539,fpsc,near/far corrected sandstone porosity,percent,neutron porosity
+540,fpsc,near/far corrected sandstone porosity,ft3/ft3,neutron porosity
+541,fpsc,near/far corrected sandstone porosity,cubic foot per cubic foot,neutron porosity
+542,fpsc,near/far corrected sandstone porosity,m3/m3,neutron porosity
+543,fpsc,near/far corrected sandstone porosity,cubic meter per cubic meter,neutron porosity
+544,fpsc,near/far corrected sandstone porosity,pu,neutron porosity
+545,fpsc,near/far corrected sandstone porosity,porosity unit,neutron porosity
+546,hasc,aps high resolution near/array corrected sandstone porosity,%,neutron porosity
+547,hasc,aps high resolution near/array corrected sandstone porosity,percent,neutron porosity
+548,hasc,aps high resolution near/array corrected sandstone porosity,ft3/ft3,neutron porosity
+549,hasc,aps high resolution near/array corrected sandstone porosity,cubic foot per cubic foot,neutron porosity
+550,hasc,aps high resolution near/array corrected sandstone porosity,m3/m3,neutron porosity
+551,hasc,aps high resolution near/array corrected sandstone porosity,cubic meter per cubic meter,neutron porosity
+552,hasc,aps high resolution near/array corrected sandstone porosity,pu,neutron porosity
+553,hasc,aps high resolution near/array corrected sandstone porosity,porosity unit,neutron porosity
+554,hnpo,high resolution enhanced thermal neutron porosity in selected lithology,%,neutron porosity
+555,hnpo,high resolution enhanced thermal neutron porosity in selected lithology,percent,neutron porosity
+556,hnpo,high resolution enhanced thermal neutron porosity in selected lithology,ft3/ft3,neutron porosity
+557,hnpo,high resolution enhanced thermal neutron porosity in selected lithology,cubic foot per cubic foot,neutron porosity
+558,hnpo,high resolution enhanced thermal neutron porosity in selected lithology,m3/m3,neutron porosity
+559,hnpo,high resolution enhanced thermal neutron porosity in selected lithology,cubic meter per cubic meter,neutron porosity
+560,hnpo,high resolution enhanced thermal neutron porosity in selected lithology,pu,neutron porosity
+561,hnpo,high resolution enhanced thermal neutron porosity in selected lithology,porosity unit,neutron porosity
+562,hnpo_san,hires enhanced thermal neutron porosity (matrix sandstone),%,neutron porosity
+563,hnpo_san,hires enhanced thermal neutron porosity (matrix sandstone),percent,neutron porosity
+564,hnpo_san,hires enhanced thermal neutron porosity (matrix sandstone),ft3/ft3,neutron porosity
+565,hnpo_san,hires enhanced thermal neutron porosity (matrix sandstone),cubic foot per cubic foot,neutron porosity
+566,hnpo_san,hires enhanced thermal neutron porosity (matrix sandstone),m3/m3,neutron porosity
+567,hnpo_san,hires enhanced thermal neutron porosity (matrix sandstone),cubic meter per cubic meter,neutron porosity
+568,hnpo_san,hires enhanced thermal neutron porosity (matrix sandstone),pu,neutron porosity
+569,hnpo_san,hires enhanced thermal neutron porosity (matrix sandstone),porosity unit,neutron porosity
+570,htnp,high resolution thermal neutron porosity (ratio method) in selected lithology,%,neutron porosity
+571,htnp,high resolution thermal neutron porosity (ratio method) in selected lithology,percent,neutron porosity
+572,htnp,high resolution thermal neutron porosity (ratio method) in selected lithology,ft3/ft3,neutron porosity
+573,htnp,high resolution thermal neutron porosity (ratio method) in selected lithology,cubic foot per cubic foot,neutron porosity
+574,htnp,high resolution thermal neutron porosity (ratio method) in selected lithology,m3/m3,neutron porosity
+575,htnp,high resolution thermal neutron porosity (ratio method) in selected lithology,cubic meter per cubic meter,neutron porosity
+576,htnp,high resolution thermal neutron porosity (ratio method) in selected lithology,pu,neutron porosity
+577,htnp,high resolution thermal neutron porosity (ratio method) in selected lithology,porosity unit,neutron porosity
+578,htnp_san,hires thermal neutron porosity (matrix sandstone),%,neutron porosity
+579,htnp_san,hires thermal neutron porosity (matrix sandstone),percent,neutron porosity
+580,htnp_san,hires thermal neutron porosity (matrix sandstone),ft3/ft3,neutron porosity
+581,htnp_san,hires thermal neutron porosity (matrix sandstone),cubic foot per cubic foot,neutron porosity
+582,htnp_san,hires thermal neutron porosity (matrix sandstone),m3/m3,neutron porosity
+583,htnp_san,hires thermal neutron porosity (matrix sandstone),cubic meter per cubic meter,neutron porosity
+584,htnp_san,hires thermal neutron porosity (matrix sandstone),pu,neutron porosity
+585,htnp_san,hires thermal neutron porosity (matrix sandstone),porosity unit,neutron porosity
+586,ncnl,near detector count rate,1/s,neutron porosity
+587,ncnl,near detector count rate,items per second,neutron porosity
+588,nphi,thermal neutron porosity (original ratio method) in selected lithology,%,neutron porosity
+589,nphi,thermal neutron porosity (original ratio method) in selected lithology,percent,neutron porosity
+590,nphi,thermal neutron porosity (original ratio method) in selected lithology,ft3/ft3,neutron porosity
+591,nphi,thermal neutron porosity (original ratio method) in selected lithology,cubic foot per cubic foot,neutron porosity
+592,nphi,thermal neutron porosity (original ratio method) in selected lithology,m3/m3,neutron porosity
+593,nphi,thermal neutron porosity (original ratio method) in selected lithology,cubic meter per cubic meter,neutron porosity
+594,nphi,thermal neutron porosity (original ratio method) in selected lithology,pu,neutron porosity
+595,nphi,thermal neutron porosity (original ratio method) in selected lithology,porosity unit,neutron porosity
+596,nphi_san,thermal neutron porosity (ratio method) (matrix sandstone),%,neutron porosity
+597,nphi_san,thermal neutron porosity (ratio method) (matrix sandstone),percent,neutron porosity
+598,nphi_san,thermal neutron porosity (ratio method) (matrix sandstone),ft3/ft3,neutron porosity
+599,nphi_san,thermal neutron porosity (ratio method) (matrix sandstone),cubic foot per cubic foot,neutron porosity
+600,nphi_san,thermal neutron porosity (ratio method) (matrix sandstone),m3/m3,neutron porosity
+601,nphi_san,thermal neutron porosity (ratio method) (matrix sandstone),cubic meter per cubic meter,neutron porosity
+602,nphi_san,thermal neutron porosity (ratio method) (matrix sandstone),pu,neutron porosity
+603,nphi_san,thermal neutron porosity (ratio method) (matrix sandstone),porosity unit,neutron porosity
+604,npor,enhanced thermal neutron porosity in selected lithology,%,neutron porosity
+605,npor,enhanced thermal neutron porosity in selected lithology,percent,neutron porosity
+606,npor,enhanced thermal neutron porosity in selected lithology,ft3/ft3,neutron porosity
+607,npor,enhanced thermal neutron porosity in selected lithology,cubic foot per cubic foot,neutron porosity
+608,npor,enhanced thermal neutron porosity in selected lithology,m3/m3,neutron porosity
+609,npor,enhanced thermal neutron porosity in selected lithology,cubic meter per cubic meter,neutron porosity
+610,npor,enhanced thermal neutron porosity in selected lithology,pu,neutron porosity
+611,npor,enhanced thermal neutron porosity in selected lithology,porosity unit,neutron porosity
+612,npor_san,enhanced thermal neutron porosity (matrix sandstone),%,neutron porosity
+613,npor_san,enhanced thermal neutron porosity (matrix sandstone),percent,neutron porosity
+614,npor_san,enhanced thermal neutron porosity (matrix sandstone),ft3/ft3,neutron porosity
+615,npor_san,enhanced thermal neutron porosity (matrix sandstone),cubic foot per cubic foot,neutron porosity
+616,npor_san,enhanced thermal neutron porosity (matrix sandstone),m3/m3,neutron porosity
+617,npor_san,enhanced thermal neutron porosity (matrix sandstone),cubic meter per cubic meter,neutron porosity
+618,npor_san,enhanced thermal neutron porosity (matrix sandstone),pu,neutron porosity
+619,npor_san,enhanced thermal neutron porosity (matrix sandstone),porosity unit,neutron porosity
+620,pron,measure of prox minus sqrt(sigma**2+tau**2),ohm.m,neutron porosity
+621,pron,measure of prox minus sqrt(sigma**2+tau**2),ohm-meter,neutron porosity
+622,snp,sidewall neutron porosity,%,neutron porosity
+623,snp,sidewall neutron porosity,percent,neutron porosity
+624,snp,sidewall neutron porosity,ft3/ft3,neutron porosity
+625,snp,sidewall neutron porosity,cubic foot per cubic foot,neutron porosity
+626,snp,sidewall neutron porosity,m3/m3,neutron porosity
+627,snp,sidewall neutron porosity,cubic meter per cubic meter,neutron porosity
+628,snp,sidewall neutron porosity,pu,neutron porosity
+629,snp,sidewall neutron porosity,porosity unit,neutron porosity
+630,tnph,thermal neutron porosity (ratio method) in selected lithology,%,neutron porosity
+631,tnph,thermal neutron porosity (ratio method) in selected lithology,percent,neutron porosity
+632,tnph,thermal neutron porosity (ratio method) in selected lithology,ft3/ft3,neutron porosity
+633,tnph,thermal neutron porosity (ratio method) in selected lithology,cubic foot per cubic foot,neutron porosity
+634,tnph,thermal neutron porosity (ratio method) in selected lithology,m3/m3,neutron porosity
+635,tnph,thermal neutron porosity (ratio method) in selected lithology,cubic meter per cubic meter,neutron porosity
+636,tnph,thermal neutron porosity (ratio method) in selected lithology,pu,neutron porosity
+637,tnph,thermal neutron porosity (ratio method) in selected lithology,porosity unit,neutron porosity
+638,tnph_san,thermal neutron porosity (matrix sandstone),%,neutron porosity
+639,tnph_san,thermal neutron porosity (matrix sandstone),percent,neutron porosity
+640,tnph_san,thermal neutron porosity (matrix sandstone),ft3/ft3,neutron porosity
+641,tnph_san,thermal neutron porosity (matrix sandstone),cubic foot per cubic foot,neutron porosity
+642,tnph_san,thermal neutron porosity (matrix sandstone),m3/m3,neutron porosity
+643,tnph_san,thermal neutron porosity (matrix sandstone),cubic meter per cubic meter,neutron porosity
+644,tnph_san,thermal neutron porosity (matrix sandstone),pu,neutron porosity
+645,tnph_san,thermal neutron porosity (matrix sandstone),porosity unit,neutron porosity
+646,enph,epithermal neutron porosity,%,neutron porosity
+647,enph,epithermal neutron porosity,percent,neutron porosity
+648,enph,epithermal neutron porosity,ft3/ft3,neutron porosity
+649,enph,epithermal neutron porosity,cubic foot per cubic foot,neutron porosity
+650,enph,epithermal neutron porosity,m3/m3,neutron porosity
+651,enph,epithermal neutron porosity,cubic meter per cubic meter,neutron porosity
+652,enph,epithermal neutron porosity,pu,neutron porosity
+653,enph,epithermal neutron porosity,porosity unit,neutron porosity
+654,apdc,near/array corrected dolomite porosity,%,neutron porosity
+655,apdc,near/array corrected dolomite porosity,percent,neutron porosity
+656,apdc,near/array corrected dolomite porosity,ft3/ft3,neutron porosity
+657,apdc,near/array corrected dolomite porosity,cubic foot per cubic foot,neutron porosity
+658,apdc,near/array corrected dolomite porosity,m3/m3,neutron porosity
+659,apdc,near/array corrected dolomite porosity,cubic meter per cubic meter,neutron porosity
+660,apdc,near/array corrected dolomite porosity,pu,neutron porosity
+661,apdc,near/array corrected dolomite porosity,porosity unit,neutron porosity
+662,aplc,near/array corrected limestone porosity,%,neutron porosity
+663,aplc,near/array corrected limestone porosity,percent,neutron porosity
+664,aplc,near/array corrected limestone porosity,ft3/ft3,neutron porosity
+665,aplc,near/array corrected limestone porosity,cubic foot per cubic foot,neutron porosity
+666,aplc,near/array corrected limestone porosity,m3/m3,neutron porosity
+667,aplc,near/array corrected limestone porosity,cubic meter per cubic meter,neutron porosity
+668,aplc,near/array corrected limestone porosity,pu,neutron porosity
+669,aplc,near/array corrected limestone porosity,porosity unit,neutron porosity
+670,aplu,near/array uncorrected limestone porosity,%,neutron porosity
+671,aplu,near/array uncorrected limestone porosity,percent,neutron porosity
+672,aplu,near/array uncorrected limestone porosity,ft3/ft3,neutron porosity
+673,aplu,near/array uncorrected limestone porosity,cubic foot per cubic foot,neutron porosity
+674,aplu,near/array uncorrected limestone porosity,m3/m3,neutron porosity
+675,aplu,near/array uncorrected limestone porosity,cubic meter per cubic meter,neutron porosity
+676,aplu,near/array uncorrected limestone porosity,pu,neutron porosity
+677,aplu,near/array uncorrected limestone porosity,porosity unit,neutron porosity
+678,fplc,near/far corrected limestone porosity,%,neutron porosity
+679,fplc,near/far corrected limestone porosity,percent,neutron porosity
+680,fplc,near/far corrected limestone porosity,ft3/ft3,neutron porosity
+681,fplc,near/far corrected limestone porosity,cubic foot per cubic foot,neutron porosity
+682,fplc,near/far corrected limestone porosity,m3/m3,neutron porosity
+683,fplc,near/far corrected limestone porosity,cubic meter per cubic meter,neutron porosity
+684,fplc,near/far corrected limestone porosity,pu,neutron porosity
+685,fplc,near/far corrected limestone porosity,porosity unit,neutron porosity
+686,fpmc,near/far corrected dolomite porosity,%,neutron porosity
+687,fpmc,near/far corrected dolomite porosity,percent,neutron porosity
+688,fpmc,near/far corrected dolomite porosity,ft3/ft3,neutron porosity
+689,fpmc,near/far corrected dolomite porosity,cubic foot per cubic foot,neutron porosity
+690,fpmc,near/far corrected dolomite porosity,m3/m3,neutron porosity
+691,fpmc,near/far corrected dolomite porosity,cubic meter per cubic meter,neutron porosity
+692,fpmc,near/far corrected dolomite porosity,pu,neutron porosity
+693,fpmc,near/far corrected dolomite porosity,porosity unit,neutron porosity
+694,hadc,aps high resolution near/array corrected dolomite porosity,%,neutron porosity
+695,hadc,aps high resolution near/array corrected dolomite porosity,percent,neutron porosity
+696,hadc,aps high resolution near/array corrected dolomite porosity,ft3/ft3,neutron porosity
+697,hadc,aps high resolution near/array corrected dolomite porosity,cubic foot per cubic foot,neutron porosity
+698,hadc,aps high resolution near/array corrected dolomite porosity,m3/m3,neutron porosity
+699,hadc,aps high resolution near/array corrected dolomite porosity,cubic meter per cubic meter,neutron porosity
+700,hadc,aps high resolution near/array corrected dolomite porosity,pu,neutron porosity
+701,hadc,aps high resolution near/array corrected dolomite porosity,porosity unit,neutron porosity
+702,halc,aps high resolution near/array corrected limestone porosity,%,neutron porosity
+703,halc,aps high resolution near/array corrected limestone porosity,percent,neutron porosity
+704,halc,aps high resolution near/array corrected limestone porosity,ft3/ft3,neutron porosity
+705,halc,aps high resolution near/array corrected limestone porosity,cubic foot per cubic foot,neutron porosity
+706,halc,aps high resolution near/array corrected limestone porosity,m3/m3,neutron porosity
+707,halc,aps high resolution near/array corrected limestone porosity,cubic meter per cubic meter,neutron porosity
+708,halc,aps high resolution near/array corrected limestone porosity,pu,neutron porosity
+709,halc,aps high resolution near/array corrected limestone porosity,porosity unit,neutron porosity
+710,hnpo_dol,hires enhanced thermal neutron porosity (matrix dolomite),%,neutron porosity
+711,hnpo_dol,hires enhanced thermal neutron porosity (matrix dolomite),percent,neutron porosity
+712,hnpo_dol,hires enhanced thermal neutron porosity (matrix dolomite),ft3/ft3,neutron porosity
+713,hnpo_dol,hires enhanced thermal neutron porosity (matrix dolomite),cubic foot per cubic foot,neutron porosity
+714,hnpo_dol,hires enhanced thermal neutron porosity (matrix dolomite),m3/m3,neutron porosity
+715,hnpo_dol,hires enhanced thermal neutron porosity (matrix dolomite),cubic meter per cubic meter,neutron porosity
+716,hnpo_dol,hires enhanced thermal neutron porosity (matrix dolomite),pu,neutron porosity
+717,hnpo_dol,hires enhanced thermal neutron porosity (matrix dolomite),porosity unit,neutron porosity
+718,hnpo_lim,hires enhanced thermal neutron porosity (matrix limestone),%,neutron porosity
+719,hnpo_lim,hires enhanced thermal neutron porosity (matrix limestone),percent,neutron porosity
+720,hnpo_lim,hires enhanced thermal neutron porosity (matrix limestone),ft3/ft3,neutron porosity
+721,hnpo_lim,hires enhanced thermal neutron porosity (matrix limestone),cubic foot per cubic foot,neutron porosity
+722,hnpo_lim,hires enhanced thermal neutron porosity (matrix limestone),m3/m3,neutron porosity
+723,hnpo_lim,hires enhanced thermal neutron porosity (matrix limestone),cubic meter per cubic meter,neutron porosity
+724,hnpo_lim,hires enhanced thermal neutron porosity (matrix limestone),pu,neutron porosity
+725,hnpo_lim,hires enhanced thermal neutron porosity (matrix limestone),porosity unit,neutron porosity
+726,htnp_dol,hires thermal neutron porosity (matrix dolomite),%,neutron porosity
+727,htnp_dol,hires thermal neutron porosity (matrix dolomite),percent,neutron porosity
+728,htnp_dol,hires thermal neutron porosity (matrix dolomite),ft3/ft3,neutron porosity
+729,htnp_dol,hires thermal neutron porosity (matrix dolomite),cubic foot per cubic foot,neutron porosity
+730,htnp_dol,hires thermal neutron porosity (matrix dolomite),m3/m3,neutron porosity
+731,htnp_dol,hires thermal neutron porosity (matrix dolomite),cubic meter per cubic meter,neutron porosity
+732,htnp_dol,hires thermal neutron porosity (matrix dolomite),pu,neutron porosity
+733,htnp_dol,hires thermal neutron porosity (matrix dolomite),porosity unit,neutron porosity
+734,htnp_lim,hires thermal neutron porosity (matrix limestone),%,neutron porosity
+735,htnp_lim,hires thermal neutron porosity (matrix limestone),percent,neutron porosity
+736,htnp_lim,hires thermal neutron porosity (matrix limestone),ft3/ft3,neutron porosity
+737,htnp_lim,hires thermal neutron porosity (matrix limestone),cubic foot per cubic foot,neutron porosity
+738,htnp_lim,hires thermal neutron porosity (matrix limestone),m3/m3,neutron porosity
+739,htnp_lim,hires thermal neutron porosity (matrix limestone),cubic meter per cubic meter,neutron porosity
+740,htnp_lim,hires thermal neutron porosity (matrix limestone),pu,neutron porosity
+741,htnp_lim,hires thermal neutron porosity (matrix limestone),porosity unit,neutron porosity
+742,nphi_dol,thermal neutron porosity (ratio method) (matrix dolomite),%,neutron porosity
+743,nphi_dol,thermal neutron porosity (ratio method) (matrix dolomite),percent,neutron porosity
+744,nphi_dol,thermal neutron porosity (ratio method) (matrix dolomite),ft3/ft3,neutron porosity
+745,nphi_dol,thermal neutron porosity (ratio method) (matrix dolomite),cubic foot per cubic foot,neutron porosity
+746,nphi_dol,thermal neutron porosity (ratio method) (matrix dolomite),m3/m3,neutron porosity
+747,nphi_dol,thermal neutron porosity (ratio method) (matrix dolomite),cubic meter per cubic meter,neutron porosity
+748,nphi_dol,thermal neutron porosity (ratio method) (matrix dolomite),pu,neutron porosity
+749,nphi_dol,thermal neutron porosity (ratio method) (matrix dolomite),porosity unit,neutron porosity
+750,nphi_lim,thermal neutron porosity (ratio method) (matrix limestone),%,neutron porosity
+751,nphi_lim,thermal neutron porosity (ratio method) (matrix limestone),percent,neutron porosity
+752,nphi_lim,thermal neutron porosity (ratio method) (matrix limestone),ft3/ft3,neutron porosity
+753,nphi_lim,thermal neutron porosity (ratio method) (matrix limestone),cubic foot per cubic foot,neutron porosity
+754,nphi_lim,thermal neutron porosity (ratio method) (matrix limestone),m3/m3,neutron porosity
+755,nphi_lim,thermal neutron porosity (ratio method) (matrix limestone),cubic meter per cubic meter,neutron porosity
+756,nphi_lim,thermal neutron porosity (ratio method) (matrix limestone),pu,neutron porosity
+757,nphi_lim,thermal neutron porosity (ratio method) (matrix limestone),porosity unit,neutron porosity
+758,npor_dol,enhanced thermal neutron porosity (matrix dolomite),%,neutron porosity
+759,npor_dol,enhanced thermal neutron porosity (matrix dolomite),percent,neutron porosity
+760,npor_dol,enhanced thermal neutron porosity (matrix dolomite),ft3/ft3,neutron porosity
+761,npor_dol,enhanced thermal neutron porosity (matrix dolomite),cubic foot per cubic foot,neutron porosity
+762,npor_dol,enhanced thermal neutron porosity (matrix dolomite),m3/m3,neutron porosity
+763,npor_dol,enhanced thermal neutron porosity (matrix dolomite),cubic meter per cubic meter,neutron porosity
+764,npor_dol,enhanced thermal neutron porosity (matrix dolomite),pu,neutron porosity
+765,npor_dol,enhanced thermal neutron porosity (matrix dolomite),porosity unit,neutron porosity
+766,npor_lim,enhanced thermal neutron porosity (matrix limestone),%,neutron porosity
+767,npor_lim,enhanced thermal neutron porosity (matrix limestone),percent,neutron porosity
+768,npor_lim,enhanced thermal neutron porosity (matrix limestone),ft3/ft3,neutron porosity
+769,npor_lim,enhanced thermal neutron porosity (matrix limestone),cubic foot per cubic foot,neutron porosity
+770,npor_lim,enhanced thermal neutron porosity (matrix limestone),m3/m3,neutron porosity
+771,npor_lim,enhanced thermal neutron porosity (matrix limestone),cubic meter per cubic meter,neutron porosity
+772,npor_lim,enhanced thermal neutron porosity (matrix limestone),pu,neutron porosity
+773,npor_lim,enhanced thermal neutron porosity (matrix limestone),porosity unit,neutron porosity
+774,tnph_dol,thermal neutron porosity (matrix dolomite),%,neutron porosity
+775,tnph_dol,thermal neutron porosity (matrix dolomite),percent,neutron porosity
+776,tnph_dol,thermal neutron porosity (matrix dolomite),ft3/ft3,neutron porosity
+777,tnph_dol,thermal neutron porosity (matrix dolomite),cubic foot per cubic foot,neutron porosity
+778,tnph_dol,thermal neutron porosity (matrix dolomite),m3/m3,neutron porosity
+779,tnph_dol,thermal neutron porosity (matrix dolomite),cubic meter per cubic meter,neutron porosity
+780,tnph_dol,thermal neutron porosity (matrix dolomite),pu,neutron porosity
+781,tnph_dol,thermal neutron porosity (matrix dolomite),porosity unit,neutron porosity
+782,tnph_lim,thermal neutron porosity (matrix limestone),%,neutron porosity
+783,tnph_lim,thermal neutron porosity (matrix limestone),percent,neutron porosity
+784,tnph_lim,thermal neutron porosity (matrix limestone),ft3/ft3,neutron porosity
+785,tnph_lim,thermal neutron porosity (matrix limestone),cubic foot per cubic foot,neutron porosity
+786,tnph_lim,thermal neutron porosity (matrix limestone),m3/m3,neutron porosity
+787,tnph_lim,thermal neutron porosity (matrix limestone),cubic meter per cubic meter,neutron porosity
+788,tnph_lim,thermal neutron porosity (matrix limestone),pu,neutron porosity
+789,tnph_lim,thermal neutron porosity (matrix limestone),porosity unit,neutron porosity
+790,tphc,tdt countrate porosity,none,neutron porosity
+791,pef,photoelectric factor,none,photoelectric effect
+792,pef_sldt,sldt/qldt photoelectric factor,none,photoelectric effect
+793,pef_sldt_hr,sldt/qldt high resolution photoelectric factor,none,photoelectric effect
+794,pef8,high resolution formation photoelectric factor,none,photoelectric effect
+795,pefa,power of epsilon free water apparent,none,photoelectric effect
+796,pefsa,formation photoelectric factor from short spacing monosensor inversion,none,photoelectric effect
+797,pefz,standard resolution formation photoelectric factor,none,photoelectric effect
+798,spef,standard deviation pef,none,photoelectric effect
+799,hpef,high resolution photoelectric factor,none,photoelectric effect
+800,hpef,high resolution photoelectric factor,none,photoelectric effect
+801,pefi,enhanced resolution formation photoelectric factor,none,photoelectric effect
+802,pefi,enhanced resolution formation photoelectric factor,none,photoelectric effect
+803,pefl,long spacing corrected photoelectric factor,none,photoelectric effect
+804,pefl,long spacing corrected photoelectric factor,none,photoelectric effect
+805,lpe,hlds weighted average photoelectric factor,none,photoelectric effect
+806,pefs,short-spaced corrected photoelectric factor,none,photoelectric effect
+807,a22h,"attenuation resistivity 22 inch spacing at 2 mhz, environmentally corrected",ohm.m,deep resistivity
+808,a22h,"attenuation resistivity 22 inch spacing at 2 mhz, environmentally corrected",ohm-meter,deep resistivity
+809,a22h_unc,uncorrected attenuation resistivity for 22 inch spacing at 2 mhz,ohm.m,deep resistivity
+810,a22h_unc,uncorrected attenuation resistivity for 22 inch spacing at 2 mhz,ohm-meter,deep resistivity
+811,a28h,"attenuation resistivity 28 inch spacing at 2 mhz, environmentally corrected",ohm.m,deep resistivity
+812,a28h,"attenuation resistivity 28 inch spacing at 2 mhz, environmentally corrected",ohm-meter,deep resistivity
+813,a28h_unc,uncorrected attenuation resistivity for 28 inch spacing at 2 mhz,ohm.m,deep resistivity
+814,a28h_unc,uncorrected attenuation resistivity for 28 inch spacing at 2 mhz,ohm-meter,deep resistivity
+815,a34h,"attenuation resistivity 34 inch spacing at 2 mhz, environmentally corrected",ohm.m,deep resistivity
+816,a34h,"attenuation resistivity 34 inch spacing at 2 mhz, environmentally corrected",ohm-meter,deep resistivity
+817,a34h_unc,uncorrected attenuation resistivity for 34 inch spacing at 2 mhz,ohm.m,deep resistivity
+818,a34h_unc,uncorrected attenuation resistivity for 34 inch spacing at 2 mhz,ohm-meter,deep resistivity
+819,af60,array induction four foot resistivity a60,ohm.m,deep resistivity
+820,af60,array induction four foot resistivity a60,ohm-meter,deep resistivity
+821,af90,array induction four foot resistivity a90,ohm.m,deep resistivity
+822,af90,array induction four foot resistivity a90,ohm-meter,deep resistivity
+823,afrt,array induction four foot rt,ohm.m,deep resistivity
+824,afrt,array induction four foot rt,ohm-meter,deep resistivity
+825,ahf60,array induction four foot resistivity a60,ohm.m,deep resistivity
+826,ahf60,array induction four foot resistivity a60,ohm-meter,deep resistivity
+827,ahf90,array induction four foot resistivity a90,ohm.m,deep resistivity
+828,ahf90,array induction four foot resistivity a90,ohm-meter,deep resistivity
+829,aho60,array induction one foot resistivity a60,ohm.m,deep resistivity
+830,aho60,array induction one foot resistivity a60,ohm-meter,deep resistivity
+831,aho90,array induction one foot resistivity a90,ohm.m,deep resistivity
+832,aho90,array induction one foot resistivity a90,ohm-meter,deep resistivity
+833,aht60,array induction two foot resistivity a60,ohm.m,deep resistivity
+834,aht60,array induction two foot resistivity a60,ohm-meter,deep resistivity
+835,aht90,array induction two foot resistivity a90,ohm.m,deep resistivity
+836,aht90,array induction two foot resistivity a90,ohm-meter,deep resistivity
+837,ahtrt,array induction two foot rt,ohm.m,deep resistivity
+838,ahtrt,array induction two foot rt,ohm-meter,deep resistivity
+839,ao60,array induction one foot resistivity a60,ohm.m,deep resistivity
+840,ao60,array induction one foot resistivity a60,ohm-meter,deep resistivity
+841,ao90,array induction one foot resistivity a90,ohm.m,deep resistivity
+842,ao90,array induction one foot resistivity a90,ohm-meter,deep resistivity
+843,aort,array induction one foot rt,ohm.m,deep resistivity
+844,aort,array induction one foot rt,ohm-meter,deep resistivity
+845,asf60,array induction four foot resistivity a60,ohm.m,deep resistivity
+846,asf60,array induction four foot resistivity a60,ohm-meter,deep resistivity
+847,asf90,array induction four foot resistivity a90,ohm.m,deep resistivity
+848,asf90,array induction four foot resistivity a90,ohm-meter,deep resistivity
+849,aso60,array induction one foot resistivity a60,ohm.m,deep resistivity
+850,aso60,array induction one foot resistivity a60,ohm-meter,deep resistivity
+851,aso90,array induction one foot resistivity a90,ohm.m,deep resistivity
+852,aso90,array induction one foot resistivity a90,ohm-meter,deep resistivity
+853,ast60,array induction two foot resistivity a60,ohm.m,deep resistivity
+854,ast60,array induction two foot resistivity a60,ohm-meter,deep resistivity
+855,ast90,array induction two foot resistivity a90,ohm.m,deep resistivity
+856,ast90,array induction two foot resistivity a90,ohm-meter,deep resistivity
+857,at60,array induction two foot resistivity a60,ohm.m,deep resistivity
+858,at60,array induction two foot resistivity a60,ohm-meter,deep resistivity
+859,at90,array induction two foot resistivity a90,ohm.m,deep resistivity
+860,at90,array induction two foot resistivity a90,ohm-meter,deep resistivity
+861,atrt,array induction two foot rt,ohm.m,deep resistivity
+862,atrt,array induction two foot rt,ohm-meter,deep resistivity
+863,diph,dit-e diameter of invasion,in,deep resistivity
+864,diph,dit-e diameter of invasion,inch,deep resistivity
+865,diph,dit-e diameter of invasion,mm,deep resistivity
+866,diph,dit-e diameter of invasion,millimeter,deep resistivity
+867,fe2,first echo value for transducer 2,none,deep resistivity
+868,hlld,hals laterolog deep resistivity,ohm.m,deep resistivity
+869,hlld,hals laterolog deep resistivity,ohm-meter,deep resistivity
+870,hrld,high resolution deep resistivity,ohm.m,deep resistivity
+871,hrld,high resolution deep resistivity,ohm-meter,deep resistivity
+872,ider,deep induction enhanced resolution phasor resistivity,ohm.m,deep resistivity
+873,ider,deep induction enhanced resolution phasor resistivity,ohm-meter,deep resistivity
+874,idph,induction deep phasor resistivity,ohm.m,deep resistivity
+875,idph,induction deep phasor resistivity,ohm-meter,deep resistivity
+876,idvr,deep induction very enhanced resolution phasor resistivity,ohm.m,deep resistivity
+877,idvr,deep induction very enhanced resolution phasor resistivity,ohm-meter,deep resistivity
+878,il,induction log,ohm.m,deep resistivity
+879,il,induction log,ohm-meter,deep resistivity
+880,ild,induction deep resistivity,ohm.m,deep resistivity
+881,ild,induction deep resistivity,ohm-meter,deep resistivity
+882,ild2,induction deep resistivity two foot,ohm.m,deep resistivity
+883,ild2,induction deep resistivity two foot,ohm-meter,deep resistivity
+884,ild4,induction deep resistivity four foot,ohm.m,deep resistivity
+885,ild4,induction deep resistivity four foot,ohm-meter,deep resistivity
+886,ll,long lower window count rate,1/s,deep resistivity
+887,ll,long lower window count rate,items per second,deep resistivity
+888,ll3,laterolog 3,ohm.m,deep resistivity
+889,ll3,laterolog 3,ohm-meter,deep resistivity
+890,ll7,laterolog 7,ohm.m,deep resistivity
+891,ll7,laterolog 7,ohm-meter,deep resistivity
+892,lld,laterolog deep resistivity,ohm.m,deep resistivity
+893,lld,laterolog deep resistivity,ohm-meter,deep resistivity
+894,ln,long normal (64 inch spacing),ohm.m,deep resistivity
+895,ln,long normal (64 inch spacing),ohm-meter,deep resistivity
+896,p10h,"phase shift resistivity 10 inch spacing at 2 mhz, environmentally corrected.",ohm.m,deep resistivity
+897,p10h,"phase shift resistivity 10 inch spacing at 2 mhz, environmentally corrected.",ohm-meter,deep resistivity
+898,p10h_unc,uncorrected phase shift resistivity for 10 inch spacing at 2 mhz,ohm.m,deep resistivity
+899,p10h_unc,uncorrected phase shift resistivity for 10 inch spacing at 2 mhz,ohm-meter,deep resistivity
+900,p16h,"phase shift resistivity 16 inch spacing at 2 mhz, environmentally corrected.",ohm.m,deep resistivity
+901,p16h,"phase shift resistivity 16 inch spacing at 2 mhz, environmentally corrected.",ohm-meter,deep resistivity
+902,p16h_unc,uncorrected phase shift resistivity for 16 inch spacing at 2 mhz,ohm.m,deep resistivity
+903,p16h_unc,uncorrected phase shift resistivity for 16 inch spacing at 2 mhz,ohm-meter,deep resistivity
+904,p22h,"phase shift resistivity 22 inch spacing at 2 mhz, environmentally corrected.",ohm.m,deep resistivity
+905,p22h,"phase shift resistivity 22 inch spacing at 2 mhz, environmentally corrected.",ohm-meter,deep resistivity
+906,p22h_unc,uncorrected phase shift resistivity for 22 inch spacing at 2 mhz,ohm.m,deep resistivity
+907,p22h_unc,uncorrected phase shift resistivity for 22 inch spacing at 2 mhz,ohm-meter,deep resistivity
+908,p28h,"phase shift resistivity 28 inch spacing at 2 mhz, environmentally corrected.",ohm.m,deep resistivity
+909,p28h,"phase shift resistivity 28 inch spacing at 2 mhz, environmentally corrected.",ohm-meter,deep resistivity
+910,p28h_unc,uncorrected phase shift resistivity for 28 inch spacing at 2 mhz,ohm.m,deep resistivity
+911,p28h_unc,uncorrected phase shift resistivity for 28 inch spacing at 2 mhz,ohm-meter,deep resistivity
+912,p34h,"phase shift resistivity 34 inch spacing at 2 mhz, environmentally corrected.",ohm.m,deep resistivity
+913,p34h,"phase shift resistivity 34 inch spacing at 2 mhz, environmentally corrected.",ohm-meter,deep resistivity
+914,p34h_unc,uncorrected phase shift resistivity for 34 inch spacing at 2 mhz,ohm.m,deep resistivity
+915,p34h_unc,uncorrected phase shift resistivity for 34 inch spacing at 2 mhz,ohm-meter,deep resistivity
+916,rfoc,calibrated real focus,v,deep resistivity
+917,rfoc,calibrated real focus,volt,deep resistivity
+918,rfoc,calibrated real focus,w/a,deep resistivity
+919,rild,raw cild conductivity,ms/m,deep resistivity
+920,rild,raw cild conductivity,millisiemens per meter,deep resistivity
+921,rla1,apparent resistivity from computed focusing mode 1,ohm.m,deep resistivity
+922,rla1,apparent resistivity from computed focusing mode 1,ohm-meter,deep resistivity
+923,rla2,apparent resistivity from computed focusing mode 2,ohm.m,deep resistivity
+924,rla2,apparent resistivity from computed focusing mode 2,ohm-meter,deep resistivity
+925,rla3,apparent resistivity from computed focusing mode 3,ohm.m,deep resistivity
+926,rla3,apparent resistivity from computed focusing mode 3,ohm-meter,deep resistivity
+927,rla4,apparent resistivity from computed focusing mode 4,ohm.m,deep resistivity
+928,rla4,apparent resistivity from computed focusing mode 4,ohm-meter,deep resistivity
+929,rla5,apparent resistivity from computed focusing mode 5,ohm.m,deep resistivity
+930,rla5,apparent resistivity from computed focusing mode 5,ohm-meter,deep resistivity
+931,rt,true resistivity,ohm.m,deep resistivity
+932,rt,true resistivity,ohm-meter,deep resistivity
+933,rt_hrlt,hrlt true formation resistivity,ohm.m,deep resistivity
+934,rt_hrlt,hrlt true formation resistivity,ohm-meter,deep resistivity
+935,ait6,acoustic impedance transducer 6,none,deep resistivity
+936,llg,laterolog groningen resistivity,ohm.m,deep resistivity
+937,llg,laterolog groningen resistivity,ohm-meter,deep resistivity
+938,rll,raw ll count rate,1/s,deep resistivity
+939,rll,raw ll count rate,items per second,deep resistivity
+940,ait9,acoustic impedance transducer 9,none,deep resistivity
+941,afco,array induction four foot conductivity,ms/m,deep resistivity
+942,afco,array induction four foot conductivity,millisiemens per meter,deep resistivity
+943,ahfco,array induction four foot conductivity,ms/m,deep resistivity
+944,ahfco,array induction four foot conductivity,millisiemens per meter,deep resistivity
+945,ahfco60,array induction four foot conductivity a60,ms/m,deep resistivity
+946,ahfco60,array induction four foot conductivity a60,millisiemens per meter,deep resistivity
+947,ahfco90,array induction four foot conductivity a90,ms/m,deep resistivity
+948,ahfco90,array induction four foot conductivity a90,millisiemens per meter,deep resistivity
+949,ahoco60,array induction one foot conductivity a60,ms/m,deep resistivity
+950,ahoco60,array induction one foot conductivity a60,millisiemens per meter,deep resistivity
+951,ahoco90,array induction one foot conductivity a90,ms/m,deep resistivity
+952,ahoco90,array induction one foot conductivity a90,millisiemens per meter,deep resistivity
+953,ahtco,array induction two foot conductivity,ms/m,deep resistivity
+954,ahtco,array induction two foot conductivity,millisiemens per meter,deep resistivity
+955,ahtco60,array induction two foot conductivity a60,ms/m,deep resistivity
+956,ahtco60,array induction two foot conductivity a60,millisiemens per meter,deep resistivity
+957,ahtco90,array induction two foot conductivity a90,ms/m,deep resistivity
+958,ahtco90,array induction two foot conductivity a90,millisiemens per meter,deep resistivity
+959,aoco,array induction one foot conductivity,ms/m,deep resistivity
+960,aoco,array induction one foot conductivity,millisiemens per meter,deep resistivity
+961,asfco60,array induction four foot conductivity a60,ms/m,deep resistivity
+962,asfco60,array induction four foot conductivity a60,millisiemens per meter,deep resistivity
+963,asfco90,array induction four foot conductivity a90,ms/m,deep resistivity
+964,asfco90,array induction four foot conductivity a90,millisiemens per meter,deep resistivity
+965,asoco90,array induction one foot conductivity a90,ms/m,deep resistivity
+966,asoco90,array induction one foot conductivity a90,millisiemens per meter,deep resistivity
+967,astco90,array induction two foot conductivity a90,ms/m,deep resistivity
+968,astco90,array induction two foot conductivity a90,millisiemens per meter,deep resistivity
+969,atco,array induction two foot conductivity,ms/m,deep resistivity
+970,atco,array induction two foot conductivity,millisiemens per meter,deep resistivity
+971,cidp,induction deep phasor conductivity,ms/m,deep resistivity
+972,cidp,induction deep phasor conductivity,millisiemens per meter,deep resistivity
+973,cild,calibrated induction deep conductivity,ms/m,deep resistivity
+974,cild,calibrated induction deep conductivity,millisiemens per meter,deep resistivity
+975,clld,laterolog deep conductivity,ms/m,deep resistivity
+976,clld,laterolog deep conductivity,millisiemens per meter,deep resistivity
+977,cond,fluid conductivity,s/m,deep resistivity
+978,cond,fluid conductivity,siemens per meter,deep resistivity
+979,fc,focused conductivity,none,deep resistivity
+980,p34h_cond,"phase shift conductivity 34 inch spacing at 2 mhz, environmentally corrected",ms/m,deep resistivity
+981,p34h_cond,"phase shift conductivity 34 inch spacing at 2 mhz, environmentally corrected",millisiemens per meter,deep resistivity
+982,af30,array induction four foot resistivity a30,ohm.m,medium resistivity
+983,af30,array induction four foot resistivity a30,ohm-meter,medium resistivity
+984,ahf30,array induction four foot resistivity a30,ohm.m,medium resistivity
+985,ahf30,array induction four foot resistivity a30,ohm-meter,medium resistivity
+986,aho30,array induction one foot resistivity a30,ohm.m,medium resistivity
+987,aho30,array induction one foot resistivity a30,ohm-meter,medium resistivity
+988,aht30,array induction two foot resistivity a30,ohm.m,medium resistivity
+989,aht30,array induction two foot resistivity a30,ohm-meter,medium resistivity
+990,ao30,array induction one foot resistivity a30,ohm.m,medium resistivity
+991,ao30,array induction one foot resistivity a30,ohm-meter,medium resistivity
+992,asf30,array induction four foot resistivity a30,ohm.m,medium resistivity
+993,asf30,array induction four foot resistivity a30,ohm-meter,medium resistivity
+994,aso30,array induction one foot resistivity a30,ohm.m,medium resistivity
+995,aso30,array induction one foot resistivity a30,ohm-meter,medium resistivity
+996,ast30,array induction two foot resistivity a30,ohm.m,medium resistivity
+997,ast30,array induction two foot resistivity a30,ohm-meter,medium resistivity
+998,at30,array induction two foot resistivity a30,ohm.m,medium resistivity
+999,at30,array induction two foot resistivity a30,ohm-meter,medium resistivity
+1000,hlls,hals laterolog shallow resistivity,ohm.m,medium resistivity
+1001,hlls,hals laterolog shallow resistivity,ohm-meter,medium resistivity
+1002,ilm,induction medium resistivity,ohm.m,medium resistivity
+1003,ilm,induction medium resistivity,ohm-meter,medium resistivity
+1004,ilm2,induction medium resistivity two foot,ohm.m,medium resistivity
+1005,ilm2,induction medium resistivity two foot,ohm-meter,medium resistivity
+1006,ilm4,induction medium resistivity four foot,ohm.m,medium resistivity
+1007,ilm4,induction medium resistivity four foot,ohm-meter,medium resistivity
+1008,imer,medium induction enhanced resolution phasor resistivity,ohm.m,medium resistivity
+1009,imer,medium induction enhanced resolution phasor resistivity,ohm-meter,medium resistivity
+1010,imph,induction medium phasor resistivity,ohm.m,medium resistivity
+1011,imph,induction medium phasor resistivity,ohm-meter,medium resistivity
+1012,imvr,medium induction very enhanced resolution phasor resistivity,ohm.m,medium resistivity
+1013,imvr,medium induction very enhanced resolution phasor resistivity,ohm-meter,medium resistivity
+1014,lls,laterolog shallow resistivity,ohm.m,medium resistivity
+1015,lls,laterolog shallow resistivity,ohm-meter,medium resistivity
+1016,rilm,raw cilm conductivity,ms/m,medium resistivity
+1017,rilm,raw cilm conductivity,millisiemens per meter,medium resistivity
+1018,ae60,array induction resistivity environmentally compensated log processing ae60,ohm.m,medium resistivity
+1019,ae60,array induction resistivity environmentally compensated log processing ae60,ohm-meter,medium resistivity
+1020,ait3,acoustic impedance transducer 3,none,medium resistivity
+1021,cilm,calibrated induction medium conductivity,ms/m,medium resistivity
+1022,cilm,calibrated induction medium conductivity,millisiemens per meter,medium resistivity
+1023,af10,array induction four foot resistivity a10,ohm.m,shallow resistivity
+1024,af10,array induction four foot resistivity a10,ohm-meter,shallow resistivity
+1025,af20,array induction four foot resistivity a20,ohm.m,shallow resistivity
+1026,af20,array induction four foot resistivity a20,ohm-meter,shallow resistivity
+1027,afrx,array induction four foot rxo,ohm.m,shallow resistivity
+1028,afrx,array induction four foot rxo,ohm-meter,shallow resistivity
+1029,ahf10,array induction four foot resistivity a10,ohm.m,shallow resistivity
+1030,ahf10,array induction four foot resistivity a10,ohm-meter,shallow resistivity
+1031,ahf20,array induction four foot resistivity a20,ohm.m,shallow resistivity
+1032,ahf20,array induction four foot resistivity a20,ohm-meter,shallow resistivity
+1033,aho10,array induction one foot resistivity a10,ohm.m,shallow resistivity
+1034,aho10,array induction one foot resistivity a10,ohm-meter,shallow resistivity
+1035,aho20,array induction one foot resistivity a20,ohm.m,shallow resistivity
+1036,aho20,array induction one foot resistivity a20,ohm-meter,shallow resistivity
+1037,ahsfi,array induction sp filtered,mv,shallow resistivity
+1038,ahsfi,array induction sp filtered,megavolt,shallow resistivity
+1039,ahsfi,array induction sp filtered,millivolt,shallow resistivity
+1040,ahsfi,array induction sp filtered,uv,shallow resistivity
+1041,ahsfi,array induction sp filtered,microvolt,shallow resistivity
+1042,aht10,array induction two foot resistivity a10,ohm.m,shallow resistivity
+1043,aht10,array induction two foot resistivity a10,ohm-meter,shallow resistivity
+1044,aht20,array induction two foot resistivity a20,ohm.m,shallow resistivity
+1045,aht20,array induction two foot resistivity a20,ohm-meter,shallow resistivity
+1046,ahtrx,array induction two foot rxo,ohm.m,shallow resistivity
+1047,ahtrx,array induction two foot rxo,ohm-meter,shallow resistivity
+1048,ao10,array induction one foot resistivity a10,ohm.m,shallow resistivity
+1049,ao10,array induction one foot resistivity a10,ohm-meter,shallow resistivity
+1050,ao20,array induction one foot resistivity a20,ohm.m,shallow resistivity
+1051,ao20,array induction one foot resistivity a20,ohm-meter,shallow resistivity
+1052,aorx,array induction one foot rxo,ohm.m,shallow resistivity
+1053,aorx,array induction one foot rxo,ohm-meter,shallow resistivity
+1054,asf10,array induction four foot resistivity a10,ohm.m,shallow resistivity
+1055,asf10,array induction four foot resistivity a10,ohm-meter,shallow resistivity
+1056,asf20,array induction four foot resistivity a20,ohm.m,shallow resistivity
+1057,asf20,array induction four foot resistivity a20,ohm-meter,shallow resistivity
+1058,asfi,array induction sp filtered,mv,shallow resistivity
+1059,asfi,array induction sp filtered,megavolt,shallow resistivity
+1060,asfi,array induction sp filtered,millivolt,shallow resistivity
+1061,asfi,array induction sp filtered,uv,shallow resistivity
+1062,asfi,array induction sp filtered,microvolt,shallow resistivity
+1063,asn,amplified short normal,ohm.m,shallow resistivity
+1064,asn,amplified short normal,ohm-meter,shallow resistivity
+1065,aso10,array induction one foot resistivity a10,ohm.m,shallow resistivity
+1066,aso10,array induction one foot resistivity a10,ohm-meter,shallow resistivity
+1067,aso20,array induction one foot resistivity a20,ohm.m,shallow resistivity
+1068,aso20,array induction one foot resistivity a20,ohm-meter,shallow resistivity
+1069,ast10,array induction two foot resistivity a10,ohm.m,shallow resistivity
+1070,ast10,array induction two foot resistivity a10,ohm-meter,shallow resistivity
+1071,ast20,array induction two foot resistivity a20,ohm.m,shallow resistivity
+1072,ast20,array induction two foot resistivity a20,ohm-meter,shallow resistivity
+1073,at10,array induction two foot resistivity a10,ohm.m,shallow resistivity
+1074,at10,array induction two foot resistivity a10,ohm-meter,shallow resistivity
+1075,at20,array induction two foot resistivity a20,ohm.m,shallow resistivity
+1076,at20,array induction two foot resistivity a20,ohm-meter,shallow resistivity
+1077,atrx,array induction two foot rxo,ohm.m,shallow resistivity
+1078,atrx,array induction two foot rxo,ohm-meter,shallow resistivity
+1079,fe1,first echo value for transducer 1,none,shallow resistivity
+1080,hrls,high resolution shallow resistivity,ohm.m,shallow resistivity
+1081,hrls,high resolution shallow resistivity,ohm-meter,shallow resistivity
+1082,ll8,laterolog 8,ohm.m,shallow resistivity
+1083,ll8,laterolog 8,ohm-meter,shallow resistivity
+1084,mfr,micro-focused resistivity,none,shallow resistivity
+1085,mll,microlaterolog resistivity,ohm.m,shallow resistivity
+1086,mll,microlaterolog resistivity,ohm-meter,shallow resistivity
+1087,msfl,micro-spherically-focused resistivity,ohm.m,shallow resistivity
+1088,msfl,micro-spherically-focused resistivity,ohm-meter,shallow resistivity
+1089,rsfl,raw sfl conductivity,ms/m,shallow resistivity
+1090,rsfl,raw sfl conductivity,millisiemens per meter,shallow resistivity
+1091,rxo,flushed zone resistivity,ohm.m,shallow resistivity
+1092,rxo,flushed zone resistivity,ohm-meter,shallow resistivity
+1093,rxo_hrlt,hrlt invaded zone resistivity,ohm.m,shallow resistivity
+1094,rxo_hrlt,hrlt invaded zone resistivity,ohm-meter,shallow resistivity
+1095,rxo8,invaded formation resistivity filtered at 8 inches,ohm.m,shallow resistivity
+1096,rxo8,invaded formation resistivity filtered at 8 inches,ohm-meter,shallow resistivity
+1097,rxoi,invaded formation resistivity very high resolution,ohm.m,shallow resistivity
+1098,rxoi,invaded formation resistivity very high resolution,ohm-meter,shallow resistivity
+1099,rxoz,invaded formation resistivity filtered at 18 inches,ohm.m,shallow resistivity
+1100,rxoz,invaded formation resistivity filtered at 18 inches,ohm-meter,shallow resistivity
+1101,sfbc,sfl borehole corrected resistivity,ohm.m,shallow resistivity
+1102,sfbc,sfl borehole corrected resistivity,ohm-meter,shallow resistivity
+1103,sfl,spherically focused log,ohm.m,shallow resistivity
+1104,sfl,spherically focused log,ohm-meter,shallow resistivity
+1105,sfla,sfl resistivity averaged over 2.5 feet,ohm.m,shallow resistivity
+1106,sfla,sfl resistivity averaged over 2.5 feet,ohm-meter,shallow resistivity
+1107,sflr,sfl resistivity raw,ohm.m,shallow resistivity
+1108,sflr,sfl resistivity raw,ohm-meter,shallow resistivity
+1109,sflu,sfl resistivity unaveraged,ohm.m,shallow resistivity
+1110,sflu,sfl resistivity unaveraged,ohm-meter,shallow resistivity
+1111,sn,short normal resistivity (16 inch spacing),ohm.m,shallow resistivity
+1112,sn,short normal resistivity (16 inch spacing),ohm-meter,shallow resistivity
+1113,ae20,array induction resistivity environmentally compensated log processing ae20,ohm.m,shallow resistivity
+1114,ae20,array induction resistivity environmentally compensated log processing ae20,ohm-meter,shallow resistivity
+1115,ae30,array induction resistivity environmentally compensated log processing ae30,ohm.m,shallow resistivity
+1116,ae30,array induction resistivity environmentally compensated log processing ae30,ohm-meter,shallow resistivity
+1117,csfl,sfl conductivity,ms/m,shallow resistivity
+1118,csfl,sfl conductivity,millisiemens per meter,shallow resistivity
+1119,sp,spontaneous potential,mv,spontaneous potential
+1120,sp,spontaneous potential,megavolt,spontaneous potential
+1121,sp,spontaneous potential,millivolt,spontaneous potential
+1122,sp,spontaneous potential,uv,spontaneous potential
+1123,sp,spontaneous potential,microvolt,spontaneous potential
+1124,spc,baseline shifted spontaneous potential,v,spontaneous potential
+1125,spc,baseline shifted spontaneous potential,volt,spontaneous potential
+1126,spc,baseline shifted spontaneous potential,w/a,spontaneous potential
+1127,spd,sp digital calibrated sparc,v,spontaneous potential
+1128,spd,sp digital calibrated sparc,volt,spontaneous potential
+1129,spd,sp digital calibrated sparc,w/a,spontaneous potential
+1130,spdf,sp digital filtered sparc,v,spontaneous potential
+1131,spdf,sp digital filtered sparc,volt,spontaneous potential
+1132,spdf,sp digital filtered sparc,w/a,spontaneous potential
+1133,spp,measure of sp plus sqrt(sigma**2+tau**2),v,spontaneous potential
+1134,spp,measure of sp plus sqrt(sigma**2+tau**2),volt,spontaneous potential
+1135,spp,measure of sp plus sqrt(sigma**2+tau**2),w/a,spontaneous potential
