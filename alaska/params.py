@@ -1,5 +1,8 @@
+"""
+Code modified from Yimai Fang's seq2seq-summarizer 
+repo: https://github.com/ymfa/seq2seq-summarizer
+"""
 from typing import Optional, Union, List
-
 
 class Params:
     # Model architecture

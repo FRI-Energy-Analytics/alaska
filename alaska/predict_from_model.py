@@ -1,3 +1,7 @@
+"""
+Code modified from Yimai Fang's seq2seq-summarizer 
+repo: https://github.com/ymfa/seq2seq-summarizer
+"""
 import tarfile
 from typing import Tuple, List
 import torch

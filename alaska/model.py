@@ -1,3 +1,7 @@
+"""
+Code modified from Yimai Fang's seq2seq-summarizer 
+repo: https://github.com/ymfa/seq2seq-summarizer
+"""
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
