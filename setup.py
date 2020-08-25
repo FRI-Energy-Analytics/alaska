@@ -5,9 +5,9 @@ from setuptools import setup, find_packages
 
 
 
-NAME = "aliaser"
-FULLNAME = "Aliaser"
-AUTHOR = "The Aliaser Developers"
+NAME = "AlasKA"
+FULLNAME = "AlasKA"
+AUTHOR = "The AlasKA Developers"
 AUTHOR_EMAIL = "destinydong@utexas.edu"
 MAINTAINER = "Destiny Dong"
 MAINTAINER_EMAIL = AUTHOR_EMAIL
@@ -34,7 +34,7 @@ CLASSIFIERS = [
 PLATFORMS = "Any"
 PACKAGES = find_packages(exclude=["doc"])
 SCRIPTS = []
-PACKAGE_DATA = {"aliaser.data": ["data/*.csv", "data/*.gz", "data/*.las"]}
+PACKAGE_DATA = {"alaska.data": ["data/*.csv", "data/*.gz", "data/*.las"]}
 
 with open("requirements.txt") as f:
     INSTALL_REQUIRES = f.readlines()
