@@ -12,7 +12,7 @@ AUTHOR_EMAIL = "destinydong@utexas.edu"
 MAINTAINER = "Destiny Dong"
 MAINTAINER_EMAIL = AUTHOR_EMAIL
 LICENSE = "MIT License"
-URL = "https://github.com/jessepisel/summer_fellows/tree/master/Well%20Log%20Mnemonics/mnem-pointer-generator"
+URL = "https://github.com/FRI-Energy-Analytics/AlasKA"
 DESCRIPTION = (
     "Automated well log mnemonics parser"
 )
