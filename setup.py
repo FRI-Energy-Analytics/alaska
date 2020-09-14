@@ -36,8 +36,14 @@ PACKAGES = find_packages(exclude=["doc"])
 SCRIPTS = []
 PACKAGE_DATA = {"alaska.data": ["data/*.csv", "data/*.gz", "data/*.las"]}
 
-with open("requirements.txt") as f:
-    INSTALL_REQUIRES = f.readlines()
+INSTALL_REQUIRES = {
+    "lasio",
+    "pandas",
+    "torch",
+    "numpy",
+    "matplotlib",
+    "backports.functools_lru_cache",
+]
 PYTHON_REQUIRES = ">=3.6"
 
 if __name__ == "__main__":
