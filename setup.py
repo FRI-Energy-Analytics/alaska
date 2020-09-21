@@ -17,7 +17,8 @@ DESCRIPTION = (
     "Automated well log mnemonics parser"
 )
 KEYWORDS = "geophysics, geology, reservoir engineering"
-LONG_DESCRIPTION = "this is the long description"
+with open('README.md') as f:
+    LONG_DESCRIPTION = f.read()
 VERSION = '0.0.1'
 CLASSIFIERS = [
     "Intended Audience :: Science/Research",
