@@ -1,6 +1,6 @@
 # AlasKA: The las file aliaser
 
-[![DOI](https://zenodo.org/badge/288477124.svg)](https://zenodo.org/badge/latestdoi/288477124)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4047049.svg)](https://doi.org/10.5281/zenodo.4047049)
 
 AlasKA is a Python package that reads mnemonics from LAS files and outputs an aliased dictionary of mnemonics and its aliases, as well as a list of mnemonics that cannot be found. It uses three different methods to find aliases to mnemonics: locates exact matches of a mnemonic in an alias dictionary, identifies keywords in mnemonics' description then returns alias from the keyword extractor, and predicts alias using all attributes of the curves.
 
