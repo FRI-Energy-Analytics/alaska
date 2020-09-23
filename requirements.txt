@@ -4,3 +4,4 @@ torch
 numpy
 matplotlib
 backports.functools_lru_cache
+seaborn
