@@ -7,8 +7,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 import random
-from params import Params
-from utils import Vocab, Hypothesis, word_detector
+from .params import Params
+from .utils import Vocab, Hypothesis, word_detector
 from typing import Union, List
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")

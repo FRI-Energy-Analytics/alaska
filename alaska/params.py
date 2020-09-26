@@ -59,9 +59,9 @@ class Params:
     # Data
     embed_file: Optional[
         str
-    ] = "data/.vector_cache/glove.6B.100d.txt"  # use pre-trained embeddings
-    data_path: str = "data/mnem.gz"
-    val_data_path: Optional[str] = "data/mnem.val.gz"
+    ] = "alaska/data/.vector_cache/glove.6B.100d.txt"  # use pre-trained embeddings
+    data_path: str = "alaska/data/mnem.gz"
+    val_data_path: Optional[str] = "alaska/data/mnem.val.gz"
     max_src_len: int = 400  # exclusive of special tokens such as EOS
     max_tgt_len: int = 100  # exclusive of special tokens such as EOS
     truncate_src: bool = True  # truncate to max_src_len? if false, drop example if too long
@@ -76,6 +76,6 @@ class Params:
     min_out_len: int = 60
     max_out_len: Optional[int] = 100
     out_len_in_words: bool = False
-    test_data_path: str = "data/mnem.test.gz"
+    test_data_path: str = "alaska/data/mnem.test.gz"
     test_sample_ratio: float = 1  # what portion of the test data is used? (1 for all data)
     test_save_results: bool = True

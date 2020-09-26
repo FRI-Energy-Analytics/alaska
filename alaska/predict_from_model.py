@@ -6,9 +6,9 @@ import tarfile
 from typing import Tuple, List
 import torch
 import math
-from utils import Vocab, OOVDict, Batch, format_tokens, Dataset
-from model import DEVICE, Seq2SeqOutput, Seq2Seq
-from params import Params
+from .utils import Vocab, OOVDict, Batch, format_tokens, Dataset
+from .model import DEVICE, Seq2SeqOutput, Seq2Seq
+from .params import Params
 
 
 def decode_batch_output(
@@ -151,7 +151,7 @@ def eval_bs(test_set: Dataset, vocab: Vocab, model: Seq2Seq, params: Params):
     n_samples = int(params.test_sample_ratio * len(test_set.pairs))
 
     if params.test_save_results and params.model_path_prefix:
-        result_file = tarfile.open("data/results.tgz", "w:gz")
+        result_file = tarfile.open("alaska/data/results.tgz", "w:gz")
     output, prob_output = {}, {}
     model.eval()
     for _ in range(1, n_samples + 1):
@@ -189,7 +189,7 @@ def make_prediction(test_path):
     )
     v = dataset.build_vocab(p.vocab_size, embed_file=p.embed_file)
     m = Seq2Seq(v, p)
-    m.load_state_dict(torch.load("state_dict.pth"))
+    m.load_state_dict(torch.load("alaska/data/state_dict.pth"))
     m.encoder.gru.flatten_parameters()
     m.decoder.gru.flatten_parameters()
 
