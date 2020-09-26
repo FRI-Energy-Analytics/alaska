@@ -4,7 +4,7 @@ import pandas as pd
 import seaborn as sns; sns.set()
 import matplotlib.pyplot as plt
 import lasio
-from predict_from_model import make_prediction
+from .predict_from_model import make_prediction
 
 
 class Node:
@@ -21,7 +21,7 @@ def make_tree():
     """
     root = Node(None)
     df = (
-        pd.read_csv("data/original_lowered.csv")
+        pd.read_csv("alaska/data/original_lowered.csv")
         .drop("Unnamed: 0", 1)
         .reset_index(drop=True)
     )
@@ -195,7 +195,7 @@ class Alias:
     """
 
     # Constructor
-    def __init__(self, dictionary=True, keyword_extractor=True, model=True, prob_cutoff=.5):
+    def __init__(self, dictionary=True, keyword_extractor=True, model=False, prob_cutoff=.5):
         self.dictionary = dictionary
         self.keyword_extractor = keyword_extractor
         self.prob_cutoff = prob_cutoff
@@ -284,7 +284,7 @@ class Alias:
         Find exact matches of mnemonics in mnemonic dictionary
         """
         df = (
-            pd.read_csv("data/comprehensive_dictionary.csv")
+            pd.read_csv("alaska/data/comprehensive_dictionary.csv")
             .drop("Unnamed: 0", 1)
             .reset_index(drop=True)
         )
@@ -351,7 +351,7 @@ class Alias:
         :return: compressed file of summaries used to generate labels
         Build input file for pointer generator
         """
-        data_path = "data/"
+        data_path = "alaska/data/"
         test_out = gzip.open(os.path.join(data_path, "input.gz"), "wt")
         for i in range(len(df)):
             fout = test_out
