@@ -13,11 +13,9 @@ MAINTAINER = "Destiny Dong"
 MAINTAINER_EMAIL = AUTHOR_EMAIL
 LICENSE = "MIT License"
 URL = "https://github.com/FRI-Energy-Analytics/AlasKA"
-DESCRIPTION = (
-    "Automated well log mnemonics parser"
-)
+DESCRIPTION = "Automated well log mnemonics parser"
 KEYWORDS = "geophysics, geology, reservoir engineering"
-with open('README.md') as f:
+with open("README.md") as f:
     LONG_DESCRIPTION = f.read()
 VERSION = versioneer.get_version()
 CLASSIFIERS = [
@@ -62,5 +60,5 @@ if __name__ == "__main__":
         classifiers=CLASSIFIERS,
         keywords=KEYWORDS,
         install_requires=INSTALL_REQUIRES,
-        python_requires=PYTHON_REQUIRES
+        python_requires=PYTHON_REQUIRES,
     )

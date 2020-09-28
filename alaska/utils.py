@@ -474,9 +474,9 @@ def rouge_parallel(
     target: List[List[str]], *predictions: List[List[str]]
 ) -> List[List[Dict[str, float]]]:
     """
-  Run ROUGE tests in parallel (by Python multi-threading, i.e. multiprocessing.dummy) to obtain
-  per-document scores. Depending on batch size and hardware, this may be slower or faster than
-  `rouge()`.
-  """
+    Run ROUGE tests in parallel (by Python multi-threading, i.e. multiprocessing.dummy) to obtain
+    per-document scores. Depending on batch size and hardware, this may be slower or faster than
+    `rouge()`.
+    """
     with Pool() as p:
         return p.map(rouge_single, zip(target, *predictions))

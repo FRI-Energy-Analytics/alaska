@@ -7,6 +7,7 @@ class TestTree(unittest.TestCase):
     """
     Unit tests for well log mnemonics parser
     """
+
     def test_make_tree(self):
         """
         Test that it can build the keyword tree
