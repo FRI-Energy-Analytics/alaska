@@ -68,9 +68,9 @@ def decode_batch(
 
 def decode_one(*args, **kwargs):
     """
-  Same as `decode_batch()` but because batch size is 1, the batch dim in visualization data is
-  eliminated.
-  """
+    Same as `decode_batch()` but because batch size is 1, the batch dim in visualization data is
+    eliminated.
+    """
     decoded_batch, out = decode_batch(*args, **kwargs)
     decoded_doc = decoded_batch[0]
     if out.enc_attn_weights is not None:
@@ -94,21 +94,21 @@ def eval_bs_batch(
     details: bool = True
 ):
     """
-  :param batch: a test batch of a single example
-  :param model: a trained summarizer
-  :param vocab: vocabulary of the trained summarizer
-  :param pack_seq: currently has no effect as batch size is 1
-  :param beam_size: the beam size
-  :param min_out_len: required minimum output length
-  :param max_out_len: required maximum output length (if None, use the model's own value)
-  :param len_in_words: if True, count output length in words instead of tokens (i.e. do not count
-                       punctuations)
-  :param best_only: if True, run ROUGE only on the best hypothesis instead of all `beam size` many
-  :param details: if True, also return a string containing the result of this document
-  :return: mnemonics and predicted label
+    :param batch: a test batch of a single example
+    :param model: a trained summarizer
+    :param vocab: vocabulary of the trained summarizer
+    :param pack_seq: currently has no effect as batch size is 1
+    :param beam_size: the beam size
+    :param min_out_len: required minimum output length
+    :param max_out_len: required maximum output length (if None, use the model's own value)
+    :param len_in_words: if True, count output length in words instead of tokens (i.e. do not count
+                         punctuations)
+    :param best_only: if True, run ROUGE only on the best hypothesis instead of all `beam size` many
+    :param details: if True, also return a string containing the result of this document
+    :return: mnemonics and predicted label
 
-  Use a trained summarizer to predict
-  """
+    Use a trained summarizer to predict
+    """
     assert len(batch.examples) == 1
     with torch.no_grad():
         input_tensor = batch.input_tensor.to(DEVICE)

@@ -1,7 +1,9 @@
 import os.path
 import gzip
 import pandas as pd
-import seaborn as sns; sns.set()
+import seaborn as sns
+
+sns.set()
 import matplotlib.pyplot as plt
 import lasio
 from .predict_from_model import make_prediction
@@ -150,6 +152,7 @@ def make_tree():
         k += 1
     return root
 
+
 def search(tree, description):
     """
     :param tree: m-ary keyword extractor tree
@@ -195,7 +198,9 @@ class Alias:
     """
 
     # Constructor
-    def __init__(self, dictionary=True, keyword_extractor=True, model=False, prob_cutoff=.5):
+    def __init__(
+        self, dictionary=True, keyword_extractor=True, model=False, prob_cutoff=0.5
+    ):
         self.dictionary = dictionary
         self.keyword_extractor = keyword_extractor
         self.prob_cutoff = prob_cutoff
@@ -227,8 +232,8 @@ class Alias:
             df = self.make_df(path)
             self.model_parse(df)
         formatted_output = {}
-        for key, val in self.output.items():  
-            formatted_output.setdefault(val, []).append(key.upper()) 
+        for key, val in self.output.items():
+            formatted_output.setdefault(val, []).append(key.upper())
         return formatted_output, self.not_found
 
     def parse_directory(self, directory):
@@ -246,11 +251,14 @@ class Alias:
                 mnem, desc = [], []
                 for key in las.keys():
                     mnem.append(key.lower())
-                    if str(las.curves[key].descr) == "" and str(las.curves[key].value) == "":
+                    if (
+                        str(las.curves[key].descr) == ""
+                        and str(las.curves[key].value) == ""
+                    ):
                         desc.append("None")
                     else:
                         desc.append(str(las.curves[key].descr).lower())
-                print("Reading {} mnemonics from {}...".format(len(mnem),filename))
+                print("Reading {} mnemonics from {}...".format(len(mnem), filename))
                 if self.dictionary is True:
                     self.dictionary_parse(mnem)
                 if self.keyword_extractor is True:
@@ -263,17 +271,15 @@ class Alias:
                 self.output = {}
                 self.duplicate, self.not_found = [], []
         formatted_output = {}
-        for key, val in comprehensive_dict.items():  
-            formatted_output.setdefault(val, []).append(key.upper()) 
+        for key, val in comprehensive_dict.items():
+            formatted_output.setdefault(val, []).append(key.upper())
         return formatted_output, comprehensive_not_found
 
     def heatmap(self):
         df = pd.DataFrame(
-            {'method': self.method,
-            'mnem': self.mnem,
-            'prob': self.probability
-            })
-        result = df.pivot(index='method',columns='mnem',values='prob')
+            {"method": self.method, "mnem": self.mnem, "prob": self.probability}
+        )
+        result = df.pivot(index="method", columns="mnem", values="prob")
         fig = sns.heatmap(result)
         return fig
 
@@ -300,7 +306,7 @@ class Alias:
                 self.probability.append(1)
                 self.method.append("dictionary")
             index += 1
-        print("Aliased {} mnemonics with dictionary".format(index-1))
+        print("Aliased {} mnemonics with dictionary".format(index - 1))
 
     def keyword_parse(self, mnem, desc):
         """
@@ -324,7 +330,7 @@ class Alias:
                 self.probability.append(1)
                 self.method.append("keyword")
             index += 1
-        print("Aliased {} mnemonics with keyword extractor".format(index-1))
+        print("Aliased {} mnemonics with keyword extractor".format(index - 1))
 
     def model_parse(self, df):
         """
@@ -337,7 +343,7 @@ class Alias:
         new_dictionary, predicted_prob = make_prediction(path)
         for key, value in predicted_prob.items():
             if float(value) >= self.prob_cutoff:
-                self.output[key]=new_dictionary[key]
+                self.output[key] = new_dictionary[key]
                 self.mnem.append(key)
                 self.probability.append(float(value))
                 self.method.append("model")
