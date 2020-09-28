@@ -1,1 +1,3 @@
 graft alaska
+include versioneer.py
+include alaska/_version.py
