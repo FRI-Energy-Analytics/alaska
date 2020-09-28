@@ -2,7 +2,7 @@
 Build and install the project.
 """
 from setuptools import setup, find_packages
-
+import versioneer
 
 
 NAME = "AlasKA"
@@ -19,7 +19,7 @@ DESCRIPTION = (
 KEYWORDS = "geophysics, geology, reservoir engineering"
 with open('README.md') as f:
     LONG_DESCRIPTION = f.read()
-VERSION = '0.0.1'
+VERSION = versioneer.get_version()
 CLASSIFIERS = [
     "Intended Audience :: Science/Research",
     "Intended Audience :: Developers",
