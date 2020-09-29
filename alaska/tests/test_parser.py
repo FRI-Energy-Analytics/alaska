@@ -3,11 +3,10 @@ import pytest
 from ..keyword_tree import Alias, search, make_tree, search_child
 from ..predict_from_model import make_prediction
 
-test_case_1 = Path('alaska/data/testcase1.las')
-test_case_2 = Path('alaska/data/testcase2.las')
-test_case_3 = Path('alaska/data/testcase3.las')
-test_case_4 = str(Path('alaska/data/testcase4.gz').resolve())
-
+test_case_1 = Path("alaska/data/testcase1.las")
+test_case_2 = Path("alaska/data/testcase2.las")
+test_case_3 = Path("alaska/data/testcase3.las")
+test_case_4 = str(Path("alaska/data/testcase4.gz").resolve())
 
 
 def test_make_tree():
@@ -17,12 +16,14 @@ def test_make_tree():
     root = make_tree()
     assert root.child[0].key == "caliper"
 
+
 def test_search():
     """
     Test that it can search the keyword tree
     """
     result = search(make_tree(), "gr")
     assert result == "gamma ray"
+
 
 def test_search_child():
     """
@@ -31,13 +32,15 @@ def test_search_child():
     result = search_child(make_tree(), "density porosity")
     assert result == "density porosity"
 
+
 def test_parse():  # 1000080059
     """
     Test that Aliaser can parse las file
     """
     aliaser = Alias()
     result = aliaser.parse(test_case_1)
-    assert result == ({'depth': ['DEPT'], 'gamma ray': ['GR']}, [])
+    assert result == ({"depth": ["DEPT"], "gamma ray": ["GR"]}, [])
+
 
 def test_dictionary_parse():
     """
@@ -45,7 +48,8 @@ def test_dictionary_parse():
     """
     aliaser = Alias(keyword_extractor=False, model=False)
     result = aliaser.parse(test_case_1)
-    assert result == ({'depth': ['DEPT'], 'gamma ray': ['GR']}, [])
+    assert result == ({"depth": ["DEPT"], "gamma ray": ["GR"]}, [])
+
 
 def test_keyword_parse():  # 3725733C.las
     """
@@ -53,7 +57,8 @@ def test_keyword_parse():  # 3725733C.las
     """
     aliaser = Alias(dictionary=False, model=False)
     result = aliaser.parse(test_case_2)
-    assert result == ({'density porosity': ['DPHI'], 'caliper': ['CALI']}, [])
+    assert result == ({"density porosity": ["DPHI"], "caliper": ["CALI"]}, [])
+
 
 def test_model_parse():
     """
@@ -63,9 +68,10 @@ def test_model_parse():
     result = aliaser.parse(test_case_3)
     assert result == ({"near quality": ["QN"], "density porosity": ["DPHI"]}, [])
 
+
 def test_make_prediction():
     """
     Test that make prediction works
     """
     result = make_prediction(test_case_4)
-    assert result == ({'qn': 'near quality'}, {'qn': 0.8421125945781427})
+    assert result == ({"qn": "near quality"}, {"qn": 0.8421125945781427})
