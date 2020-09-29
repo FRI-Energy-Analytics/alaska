@@ -6,7 +6,7 @@ from ..predict_from_model import make_prediction
 test_case_1 = Path('alaska/data/testcase1.las')
 test_case_2 = Path('alaska/data/testcase2.las')
 test_case_3 = Path('alaska/data/testcase3.las')
-test_case_4 = Path('alaska/data/')
+test_case_4 = str(Path('alaska/data/testcase4.gz').resolve())
 
 
 
@@ -68,4 +68,4 @@ def test_make_prediction():
     Test that make prediction works
     """
     result = make_prediction(test_case_4)
-    assert result == ({"qn": "near quality"})
+    assert result == ({'qn': 'near quality'}, {'qn': 0.8421125945781427})
