@@ -74,4 +74,5 @@ def test_make_prediction():
     Test that make prediction works
     """
     result = make_prediction(test_case_4)
-    assert result == ({"qn": "near quality"}, {"qn": 0.8421125945781427})
+    assert result[0] == {"qn": "near quality"}
+    assert result[1]['qn'] == pytest.approx(0.8421125945781427, rel=1e-4) 
