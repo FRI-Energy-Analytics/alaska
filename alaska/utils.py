@@ -20,7 +20,7 @@ import gzip
 
 plt.switch_backend("agg")
 
-word_detector = re.compile("\w")
+word_detector = re.compile(r"\w")
 
 
 class Vocab(object):
