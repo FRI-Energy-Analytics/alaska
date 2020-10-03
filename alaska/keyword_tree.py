@@ -296,17 +296,20 @@ class Alias:
         )
         print("Alasing with dictionary...")
         dic = df.apply(lambda x: x.astype(str).str.lower())
-        index = 0
-        for i in mnem:
-            if i in dic.mnemonics.unique():
-                key = dic.loc[dic["mnemonics"] == i, "label"].iloc[0]  # can be reduced?
-                self.output[i] = key
+        aliased = 0
+        for index, word in enumerate(mnem):
+            if word in dic.mnemonics.unique():
+                # can be reduced?
+                key = dic.loc[dic["mnemonics"] == word, "label"].iloc[0]
+                self.output[word] = key
                 self.duplicate.append(index)
-                self.mnem.append(i)
+                self.mnem.append(word)
                 self.probability.append(1)
                 self.method.append("dictionary")
-            index += 1
-        print("Aliased {} mnemonics with dictionary".format(index - 1))
+                aliased += 1
+            else:
+                self.not_found.append(word)
+        print("Aliased {} mnemonics with dictionary".format(aliased))
 
     def keyword_parse(self, mnem, desc):
         """
@@ -318,19 +321,22 @@ class Alias:
         Tree = make_tree()
         new_desc = [v for i, v in enumerate(desc) if i not in self.duplicate]
         new_mnem = [v for i, v in enumerate(mnem) if i not in self.duplicate]
-        index = 0
+        aliased = 0
         print("Alasing with keyword extractor...")
-        for i in new_desc:
-            key = search(Tree, i)
+        for index, word in enumerate(new_desc):
+            key = search(Tree, word)
             if key == None:
-                self.not_found.append(new_mnem[index])
+                if new_mnem[index] not in self.not_found:
+                    self.not_found.append(new_mnem[index])
             else:
                 self.output[new_mnem[index]] = key
                 self.mnem.append(new_mnem[index])
                 self.probability.append(1)
                 self.method.append("keyword")
-            index += 1
-        print("Aliased {} mnemonics with keyword extractor".format(index - 1))
+                if new_mnem[index] in self.not_found:
+                    self.not_found.remove(new_mnem[index])
+                aliased += 1
+        print("Aliased {} mnemonics with keyword extractor".format(aliased))
 
     def model_parse(self, df):
         """

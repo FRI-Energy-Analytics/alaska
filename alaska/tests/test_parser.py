@@ -42,7 +42,7 @@ def test_parse():  # 1000080059
     assert result == ({"depth": ["DEPT"], "gamma ray": ["GR"]}, [])
 
 
-def test_dictionary_parse():
+def test_dictionary_parse_1():
     """
     Test that dictionary parser in Aliaser parses and returns correct labels
     """
@@ -51,13 +51,64 @@ def test_dictionary_parse():
     assert result == ({"depth": ["DEPT"], "gamma ray": ["GR"]}, [])
 
 
-def test_keyword_parse():  # 3725733C.las
+def test_dictionary_parse_3():
+    """
+    Test that dictionary parser in Aliaser parses and returns correct labels
+    with one item aliased and one item not aliased.
+    """
+    aliaser = Alias(keyword_extractor=False, model=False)
+    aliased, not_aliased = aliaser.parse(test_case_3)
+
+    assert len(aliased) == 1
+    assert "density porosity" in aliased
+    assert len(not_aliased) == 1
+    assert "qn" in not_aliased
+
+
+def test_keyword_parse_1():
+    """
+    Test that keyword parser in Aliaser parses and returns correct labels
+    """
+    aliaser = Alias(dictionary=False, model=False)
+    aliased, not_aliased = aliaser.parse(test_case_1)
+
+    assert len(aliased) == 1
+    assert "gamma ray" in aliased
+    assert len(not_aliased) == 1
+    assert "dept" in not_aliased
+
+
+def test_keyword_parse_2():  # 3725733C.las
     """
     Test that keyword parser in Aliaser parses and returns correct labels
     """
     aliaser = Alias(dictionary=False, model=False)
     result = aliaser.parse(test_case_2)
     assert result == ({"density porosity": ["DPHI"], "caliper": ["CALI"]}, [])
+
+
+def test_dictionary_and_keyword_parse_1():
+    """
+    Test that keyword parser in Aliaser parses and returns correct labels
+    """
+    aliaser = Alias(model=False)
+    aliased, not_aliased = aliaser.parse(test_case_1)
+
+    assert aliased == {"depth": ["DEPT"], "gamma ray": ["GR"]}
+    assert len(not_aliased) == 0
+
+
+def test_dictionary_and_keyword_parse_3():
+    """
+    Test that keyword parser in Aliaser parses and returns correct labels
+    """
+    aliaser = Alias(model=False)
+    aliased, not_aliased = aliaser.parse(test_case_3)
+
+    assert len(aliased) == 1
+    assert "density porosity" in aliased
+    assert len(not_aliased) == 1
+    assert "qn" in not_aliased
 
 
 def test_model_parse():
@@ -75,4 +126,4 @@ def test_make_prediction():
     """
     result = make_prediction(test_case_4)
     assert result[0] == {"qn": "near quality"}
-    assert result[1]['qn'] == pytest.approx(0.8421125945781427, rel=1e-4) 
+    assert result[1]["qn"] == pytest.approx(0.8421125945781427, rel=1e-4)
