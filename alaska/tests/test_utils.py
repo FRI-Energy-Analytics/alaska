@@ -45,7 +45,7 @@ def test_vocab_embeddings():
    Test that the vocab class embeddings are equal to None at instantiation
    """
     vc = Vocab()
-    assert vc.embeddings == None
+    assert vc.embeddings is None
 
 
 def test_vocab_getitem():
@@ -72,9 +72,9 @@ def test_vocab_words():
    """
     vc = Vocab()
     vc.add_words(["mwd", "lwd", "lwd"])
-    assert vc.is_word(token_id=3) == False
-    assert vc.is_word(token_id=7) == True
-    assert vc.is_word(True) == False
+    assert vc.is_word(token_id=3) is not True
+    assert vc.is_word(token_id=7) is True
+    assert vc.is_word(True) is not True
 
 
 def test_oovdict_add_words():
