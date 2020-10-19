@@ -1,11 +1,11 @@
 from predict_from_model import eval_bs, make_prediction
 from keyword_tree import Alias
+from pathlib import Path
 import lasio
 import pandas as pd
 
-path = (
-    "data/testcase3.las"
-)  # "/Users/destiny/EnergyAnalytics/Software/LAS_files/1/43013341710000_MAIN.las"#"/Users/destiny/EnergyAnalytics/Software/100Wells/3725634A.las"#"/Users/destiny/EnergyAnalytics/Software/LAS_files/1/43013341710000_MAIN.las"
+
+path = = Path("alaska/data/testcase3.las")
 a = Alias()
 parsed, not_found = a.parse(path)
 las = lasio.read(path)
