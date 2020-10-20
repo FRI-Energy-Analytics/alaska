@@ -69,7 +69,6 @@ def test_parse_2():
     Test that Aliaser can parse las file with an empty mnemonic
     """
     aliaser = Alias()
-    # import pdb; pdb.set_trace()
     result = aliaser.parse(test_case_5)
     assert result == ({"depth": ["DEPT"], "gamma ray": ["GR"]}, ["empty"])
 
