@@ -75,33 +75,3 @@ def test_vocab_words():
     assert vc.is_word(token_id=3) is not True
     assert vc.is_word(token_id=7) is True
     assert vc.is_word(True) is not True
-
-
-def test_oovdict_add_words():
-    """
-   Test that the OOVDict class can add words
-   """
-
-
-def test_batch_vocab_size():
-    """
-   Test that the Batch class vocab size method works
-   """
-
-
-def test_simple_tokenizer():
-    """
-   Test the simple tokenizer for lowercase and newline replace
-   """
-
-
-def test_dataset_class_open():
-    """
-   Test that the dataset class open errors print
-   """
-
-
-def test_dataset_build_vocab():
-    """
-   Test that the dataset class build vocab else loop works
-   """
