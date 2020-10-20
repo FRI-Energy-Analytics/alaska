@@ -78,13 +78,20 @@ def test_parse_directory_1():
     """
     Test that Aliaser can parse a directory of las files
     """
-    expect_aliased = ["depth", "gamma ray", "density porosity", "caliper"]
-    expect_not_aliased = ["empty", "qn"]
-
     aliaser = Alias()
     aliased, not_aliased = aliaser.parse_directory(test_dir_1)
-    assert list(aliased) == expect_aliased
-    assert not_aliased == expect_not_aliased
+    have1 = aliased.get("density porosity", None)
+    have2 = aliased.get("depth", None)
+    have3 = aliased.get("gamma ray", None)
+
+    # Aliased
+    assert have1 == ["DPHI"]
+    assert have2 == ["DEPT"]
+    assert have3 == ["GR"]
+
+    # Not Aliased
+    assert "qn" in not_aliased
+    assert "empty" in not_aliased
 
 
 def test_parse_directory_2():
@@ -92,11 +99,10 @@ def test_parse_directory_2():
     Test that Aliaser can parse a directory of las files and use the model
     parser
     """
-    # aliaser = Alias()
     aliaser = Alias(dictionary=False, keyword_extractor=False, model=True)
     aliased, not_aliased = aliaser.parse_directory(test_dir_1)
-    have1 = aliased.get("density porosity", "")
-    have2 = aliased.get("medium conductivity", "")
+    have1 = aliased.get("density porosity", None)
+    have2 = aliased.get("medium conductivity", None)
     assert have1 == ["DPHI"]
     assert have2 == ["DEPT"]
     assert "empty" in not_aliased
