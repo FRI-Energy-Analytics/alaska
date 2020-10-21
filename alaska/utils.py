@@ -1,5 +1,5 @@
 """
-Code modified from Yimai Fang's seq2seq-summarizer 
+Code modified from Yimai Fang's seq2seq-summarizer
 repo: https://github.com/ymfa/seq2seq-summarizer
 """
 import os
@@ -7,15 +7,15 @@ import re
 from tempfile import TemporaryDirectory
 import subprocess
 from multiprocessing.dummy import Pool
+import gzip
+from functools import lru_cache
+from random import shuffle
+from collections import Counter
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 from typing import NamedTuple, List, Callable, Dict, Tuple, Optional
-from collections import Counter
-from random import shuffle
-from functools import lru_cache
 import torch
-import gzip
 
 
 plt.switch_backend("agg")
