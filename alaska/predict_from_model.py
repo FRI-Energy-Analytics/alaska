@@ -1,11 +1,11 @@
 """
-Code modified from Yimai Fang's seq2seq-summarizer 
+Code modified from Yimai Fang's seq2seq-summarizer
 repo: https://github.com/ymfa/seq2seq-summarizer
 """
 import tarfile
 from typing import Tuple, List
-import torch
 import math
+import torch
 from .utils import Vocab, OOVDict, Batch, format_tokens, Dataset
 from .model import DEVICE, Seq2SeqOutput, Seq2Seq
 from .params import Params
