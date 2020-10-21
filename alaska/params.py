@@ -2,10 +2,13 @@
 Code modified from Yimai Fang's seq2seq-summarizer 
 repo: https://github.com/ymfa/seq2seq-summarizer
 """
-from typing import Optional, Union, List
+from typing import Optional
 
 
 class Params:
+    """
+    Parameters for the Pointer generator model trainng
+    """
     # Model architecture
     vocab_size: int = 30000
     hidden_size: int = (
