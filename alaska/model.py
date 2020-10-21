@@ -1,15 +1,15 @@
 """
-Code modified from Yimai Fang's seq2seq-summarizer 
+Code modified from Yimai Fang's seq2seq-summarizer
 repo: https://github.com/ymfa/seq2seq-summarizer
 """
+from typing import Union, List
+import random
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
-import random
+from .utils import Vocab, Hypothesis
 from .params import Params
-from .utils import Vocab, Hypothesis, word_detector
-from typing import Union, List
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 eps = 1e-31
@@ -27,8 +27,8 @@ class EncoderRNN(nn.Module):
         :param embedded: (src seq len, batch size, embed size)
         :param hidden: (num directions, batch size, encoder hidden size)
         :param input_lengths: list containing the non-padded length of each sequence in this batch;
-                            if set, we use `PackedSequence` to skip the PAD inputs and leave the
-                            corresponding encoder states as zeros
+        if set, we use `PackedSequence` to skip the PAD inputs and leave the
+        corresponding encoder states as zeros
         :return: (src seq len, batch size, hidden size * num directions = decoder hidden size)
 
         Perform multi-step encoding.
@@ -146,14 +146,14 @@ class DecoderRNN(nn.Module):
         :param encoder_states: (src seq len, batch size, hidden size), for attention mechanism
         :param decoder_states: (past dec steps, batch size, hidden size), for attention mechanism
         :param encoder_word_idx: (src seq len, batch size), for pointer network
-        :param ext_vocab_size: the dynamic vocab size, determined by the max num of OOV words contained
-                               in any src seq in this batch, for pointer network
+        :param ext_vocab_size: the dynamic vocab size, determined by the max num of OOV words
+        contained in any src seq in this batch, for pointer network
         :param log_prob: return log probability instead of probability
         :return: tuple of four things:
-                 1. word prob or log word prob, (batch size, dynamic vocab size);
-                 2. RNN hidden state after this step, (1, batch size, decoder hidden size);
-                 3. attention weights over encoder states, (batch size, src seq len);
-                 4. prob of copying by pointing as opposed to generating, (batch size, 1)
+        1. word prob or log word prob, (batch size, dynamic vocab size);
+        2. RNN hidden state after this step, (1, batch size, decoder hidden size);
+        3. attention weights over encoder states, (batch size, src seq len);
+        4. prob of copying by pointing as opposed to generating, (batch size, 1)
 
         Perform single-step decoding.
         """
@@ -268,9 +268,9 @@ class Seq2Seq(nn.Module):
         :param vocab: mainly for info about special tokens and vocab size
         :param params: model hyper-parameters
         :param max_dec_steps: max num of decoding steps (only effective at test time, as during
-                              training the num of steps is determined by the `target_tensor`); it is
-                              safe to change `self.max_dec_steps` as the network architecture is
-                              independent of src/tgt seq lengths
+        training the num of steps is determined by the `target_tensor`); it is
+        safe to change `self.max_dec_steps` as the network architecture is
+        independent of src/tgt seq lengths
 
         Create the seq2seq model; its encoder and decoder will be created automatically.
         """
@@ -375,12 +375,12 @@ class Seq2Seq(nn.Module):
         :param forcing_ratio: see explanation in `Params` (requires `target_tensor`, training only)
         :param partial_forcing: see explanation in `Params` (training only)
         :param ext_vocab_size: see explanation in `DecoderRNN`
-        :param sample: if True, the returned `decoded_tokens` will be based on random sampling instead
-                       of greedily selecting the token of the highest probability at each step
-        :param saved_out: the output of this function in a previous run; if set, the encoding step will
-                          be skipped and we reuse the encoder states saved in this object
+        :param sample: if True, the returned `decoded_tokens` will be based on random sampling
+        instead of greedily selecting the token of the highest probability at each step
+        :param saved_out: the output of this function in a previous run; if set, the encoding step
+        will be skipped and we reuse the encoder states saved in this object
         :param visualize: whether to return data for attention and pointer visualization; if None,
-                          return if no `criterion` is provided
+        return if no `criterion` is provided
         :param include_cover_loss: whether to include coverage loss in the returned `loss_value`
 
         Run the seq2seq model for training or testing.
@@ -401,7 +401,8 @@ class Seq2Seq(nn.Module):
             target_length = target_tensor.size(0)
 
         if forcing_ratio == 1:
-            # if fully teacher-forced, it may be possible to eliminate the for-loop over decoder steps
+            # if fully teacher-forced, it may be possible to eliminate
+            # the for-loop over decoder steps
             # for generality, this optimization is not investigated
             use_teacher_forcing = True
         elif forcing_ratio > 0:
@@ -530,15 +531,15 @@ class Seq2Seq(nn.Module):
         len_in_words=True
     ) -> List[Hypothesis]:
         """
-        :param input_tensor: tensor of word indices, (src seq len, batch size); for now, batch size has
-                             to be 1
+        :param input_tensor: tensor of word indices, (src seq len, batch size); for now,
+        batch size has to be 1
         :param input_lengths: see explanation in `EncoderRNN`
         :param ext_vocab_size: see explanation in `DecoderRNN`
         :param beam_size: the beam size
         :param min_out_len: required minimum output length
         :param max_out_len: required maximum output length (if None, use the model's own value)
-        :param len_in_words: if True, count output length in words instead of tokens (i.e. do not count
-                             punctuations)
+        :param len_in_words: if True, count output length in words instead of tokens
+        (i.e. do not count punctuations)
         :return: list of the best decoded sequences, in descending order of probability
 
         Use beam search to generate summaries.
