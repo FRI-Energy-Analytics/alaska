@@ -5,7 +5,7 @@ import lasio
 import pandas as pd
 
 
-path = = Path("alaska/data/testcase3.las")
+path = Path("alaska/data/testcase3.las")
 a = Alias()
 parsed, not_found = a.parse(path)
 las = lasio.read(path)
