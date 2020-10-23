@@ -363,6 +363,8 @@ class Alias:
                 self.mnem.append(key)
                 self.probability.append(float(value))
                 self.method.append("model")
+                if key in self.not_found:
+                    self.not_found.remove(key)
             else:
                 self.not_found.append(key)
         print("Aliased {} mnemonics with pointer generator".format(len(predicted_prob)))
