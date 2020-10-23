@@ -152,6 +152,24 @@ def test_keyword_parse_2():  # 3725733C.las
     assert result == ({"density porosity": ["DPHI"], "caliper": ["CALI"]}, [])
 
 
+def test_keyword_parse_3():
+    """
+    Test that keyword parser in Aliaser successfully removes found items from
+    the not_found list
+    """
+    aliaser = Alias(dictionary=False, model=False)
+    aliaser.not_found.extend(["gr", "no such thing"])
+    found, not_found = aliaser.parse(test_case_5)
+
+    have1 = found.get("gamma ray", None)
+
+    assert have1 == ["GR"]
+    assert "gr" not in not_found
+    assert "gr" not in aliaser.not_found
+    assert "no such thing" in not_found
+    assert "no such thing" in aliaser.not_found
+
+
 def test_dictionary_and_keyword_parse_1():
     """
     Test that keyword parser in Aliaser parses and returns correct labels
@@ -183,6 +201,27 @@ def test_model_parse():
     aliaser = Alias(dictionary=False, keyword_extractor=False, model=True)
     result = aliaser.parse(test_case_3)
     assert result == ({"near quality": ["QN"], "density porosity": ["DPHI"]}, [])
+
+
+def test_model_parse_2():
+    """
+    Test that model in Aliaser parses and returns correct predictions and
+    removes found items from the not_found list
+
+    expected data
+    aliased == {"near quality": ["QN"], "density porosity": ["DPHI"]}
+    not_aliased == []
+    """
+    aliaser = Alias(dictionary=True, keyword_extractor=False, model=True)
+    aliased, not_aliased = aliaser.parse(test_case_3)
+
+    have1 = aliased.get("density porosity", None)
+    have2 = aliased.get("near quality", None)
+
+    assert have1 == ["DPHI"]
+    assert have2 == ["QN"]
+    assert "qn" not in not_aliased
+    assert "qn" not in aliaser.not_found
 
 
 def test_make_prediction():
