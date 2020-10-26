@@ -1,15 +1,21 @@
+"""
+contains the keyword tree extractor and alias class
+"""
 import os.path
 import gzip
 import pandas as pd
 import seaborn as sns
-
-sns.set()
-import matplotlib.pyplot as plt
 import lasio
 from .predict_from_model import make_prediction
 
+sns.set()
+
 
 class Node:
+    """
+    Node class for use in the keyword tree extractor
+    """
+
     def __init__(self, key):
         self.key = key
         self.child = []
@@ -190,10 +196,10 @@ def search_child(node, description):
 
 class Alias:
     """
-    :param dictionary: whether to use dictionary to make predictions on the labels
-    :param keyword_extractor: whether to use keyword extractor to make predictions on the labels
-    :param model: whether to use model to make predictions on the labels
-    :return: one dictionary containing mnemonics and labels, one list containing mnemonics that can't be aliased
+    :param dictionary: boolean for dictionary aliasing
+    :param keyword_extractor: boolean for keyword extractor aliasing
+    :param model: boolean for model aliasing
+    :return: dictionary of mnemonics and labels, list of mnemonics that can't be aliased
     Parses LAS file and returns parsed mnemonics with labels
     """
 
@@ -212,7 +218,7 @@ class Alias:
     def parse(self, path):
         """
         :param path: path to LAS file to be aliased
-        :return: one dictionary containing mnemonics and labels, one list containing mnemonics that can't be aliased
+        :return: dictionary of mnemonics and labels, list of mnemonics that can't be aliased
         Parses LAS file and call parsers accordingly
         """
         las = lasio.read(path)
@@ -239,7 +245,7 @@ class Alias:
     def parse_directory(self, directory):
         """
         :param path: path to directory containing LAS files
-        :return: one dictionary containing mnemonics and labels, one list containing mnemonics that can't be aliased
+        :return: dictionary of mnemonics and labels, list of mnemonics that can't be aliased
         Parses LAS files and call parsers accordingly
         """
         comprehensive_dict = {}
@@ -276,6 +282,9 @@ class Alias:
         return formatted_output, comprehensive_not_found
 
     def heatmap(self):
+        """
+        Plots a heatmap with mnemonics and prediction probabilities
+        """
         df = pd.DataFrame(
             {"method": self.method, "mnem": self.mnem, "prob": self.probability}
         )
@@ -316,7 +325,8 @@ class Alias:
         :param mnem: list of mnemonics
         :param desc: list of descriptions
         :return: None
-        Find exact labels of mnemonics with descriptions that can be filtered through keyword extractor tree
+        Find exact labels of mnemonics with descriptions that can be 
+        filtered through keyword extractor tree
         """
         Tree = make_tree()
         new_desc = [v for i, v in enumerate(desc) if i not in self.duplicate]
@@ -325,7 +335,7 @@ class Alias:
         print("Alasing with keyword extractor...")
         for index, word in enumerate(new_desc):
             key = search(Tree, word)
-            if key == None:
+            if key is None:
                 if new_mnem[index] not in self.not_found:
                     self.not_found.append(new_mnem[index])
             else:
