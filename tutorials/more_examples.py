@@ -20,11 +20,19 @@ from welly import Project
 import lasio
 
 path = "data/testcase1.las"
+
 # initialize aliaser
-a = Alias()
-# the parameters can also be customized as such:
-# a = Alias(dictionary=True, keyword_extractor=True,
-#                          model=True, prob_cutoff=.5)
+# explanations for parameters:
+# dictionary looks for exact matches of mnemonics, in
+# the mnemonics to labels dictionary we built.
+# keyword_extractor finds keywords in descriptions of
+# mnemonics and maps them to labels.
+# model uses trained neural network weights to determine
+# most likely label for a mnemonic. Therefore, prob_cutoff
+# determines mnemonics to be aliased with certain degree of
+# confidence.
+# the parameters can be customized as such:
+a = Alias(dictionary=True, keyword_extractor=False, model=True, prob_cutoff=0.5)
 
 # the parse function returns two dictionaries, one for parsed
 # and another one for mnemonics not found using the aliaser
