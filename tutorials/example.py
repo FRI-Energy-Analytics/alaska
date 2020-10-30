@@ -1,9 +1,12 @@
-from predict_from_model import eval_bs, make_prediction
-from keyword_tree import Alias
+"""
+Example script demonstrating AlasKA parsing
+"""
 from pathlib import Path
+
 import lasio
 import pandas as pd
 
+from keyword_tree import Alias
 
 path = Path("alaska/data/testcase3.las")
 a = Alias()
