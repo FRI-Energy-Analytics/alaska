@@ -6,7 +6,7 @@ Often, a mnemonic aliasing process looks like the following:
 
 #. List all the mnemonics in the file
 #. Group synonymous mnemonics under a single label
-#. Make dictionaries with mnemonics and labels 
+#. Make dictionaries with mnemonics and labels
 #. Feed dictionaries into welly
 
 The class alaska.Aliaser takes input mnemonics from a LAS file
@@ -15,11 +15,15 @@ synonymous mnemonics are grouped under the same label.
 
 See example below.
 """
-from aliaser import Alias
-from welly import Project
-import lasio
+import os
 
-path = "data/testcase1.las"
+from welly import Project
+
+from alaska import Alias, get_data_path
+
+path = os.path.join(get_data_path(), "testcase1.las")
+
+
 # initialize aliaser
 a = Alias()
 # the parameters can also be customized as such:

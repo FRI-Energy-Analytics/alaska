@@ -1,14 +1,16 @@
 """
 Example script demonstrating AlasKA parsing
 """
+import os
 from pathlib import Path
 
 import lasio
 import pandas as pd
 
-from keyword_tree import Alias
+from alaska import Alias, get_data_path
 
-path = Path("alaska/data/testcase3.las")
+path = Path(os.path.join(get_data_path(), "testcase3.las"))
+
 a = Alias()
 parsed, not_found = a.parse(path)
 las = lasio.read(path)
