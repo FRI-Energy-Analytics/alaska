@@ -4,6 +4,9 @@ location whether it is a regular package install (pip install alaska) or a
 developer/editable install from the alaska repo (pip install -e .)
 also see: https://importlib-resources.readthedocs.io/en/latest/
 """
+# Maintenance note:
+#    When Python 3.6 support ends, this try/except can be
+#   changed to simply `import importlib.resources as pkg_resources`
 try:
     import importlib.resources as pkg_resources
 except ImportError:
