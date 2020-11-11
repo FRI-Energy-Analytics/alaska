@@ -7,3 +7,4 @@ backports.functools_lru_cache
 seaborn
 pytest-cov
 codecov
+importlib_resources

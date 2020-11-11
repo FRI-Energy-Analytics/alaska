@@ -3,12 +3,18 @@ contains the keyword tree extractor and alias class
 """
 import os.path
 import gzip
+
 import pandas as pd
 import seaborn as sns
 import lasio
+
+# alaska imports
 from .predict_from_model import make_prediction
+from .get_data_path import get_data_path
 
 sns.set()
+
+alaska_data_path = get_data_path()
 
 
 class Node:
@@ -27,9 +33,12 @@ def make_tree():
     :return: m-ary tree of keywords that forms keyword extractor tree
     Generates keyword extractor tree
     """
+
+    original_lowered_csv = os.path.join(alaska_data_path, "original_lowered.csv")
+
     root = Node(None)
     df = (
-        pd.read_csv("alaska/data/original_lowered.csv")
+        pd.read_csv(original_lowered_csv)
         .drop("Unnamed: 0", 1)
         .reset_index(drop=True)
     )
@@ -298,8 +307,12 @@ class Alias:
         :return: None
         Find exact matches of mnemonics in mnemonic dictionary
         """
+        comprehensive_dictionary_csv = os.path.join(
+            alaska_data_path, "comprehensive_dictionary.csv"
+        )
+
         df = (
-            pd.read_csv("alaska/data/comprehensive_dictionary.csv")
+            pd.read_csv(comprehensive_dictionary_csv)
             .drop("Unnamed: 0", 1)
             .reset_index(drop=True)
         )
@@ -325,7 +338,7 @@ class Alias:
         :param mnem: list of mnemonics
         :param desc: list of descriptions
         :return: None
-        Find exact labels of mnemonics with descriptions that can be 
+        Find exact labels of mnemonics with descriptions that can be
         filtered through keyword extractor tree
         """
         Tree = make_tree()
