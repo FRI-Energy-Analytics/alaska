@@ -21,7 +21,7 @@ from welly import Project
 
 from alaska import Alias, get_data_path
 
-path = os.path.join(get_data_path(), "testcase1.las")
+path = str(get_data_path("testcase1.las"))
 
 
 # initialize aliaser

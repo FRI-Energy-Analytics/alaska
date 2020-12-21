@@ -9,7 +9,7 @@ import pandas as pd
 
 from alaska import Alias, get_data_path
 
-path = Path(os.path.join(get_data_path(), "testcase3.las"))
+path = Path(get_data_path("testcase3.las"))
 
 a = Alias()
 parsed, not_found = a.parse(path)
