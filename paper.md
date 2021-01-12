@@ -20,7 +20,7 @@ affiliations:
    index: 1
  - name: Texas Institute for Discovery Education in Science, The University of Texas at Austin
    index: 2 
-date: 20 December 2020
+date: 12 January 2021
 bibliography: paper.bib
 ---
 
