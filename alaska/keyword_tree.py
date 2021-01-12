@@ -14,8 +14,6 @@ from .get_data_path import get_data_path
 
 sns.set()
 
-alaska_data_path = get_data_path()
-
 
 class Node:
     """
@@ -34,7 +32,7 @@ def make_tree():
     Generates keyword extractor tree
     """
 
-    original_lowered_csv = os.path.join(alaska_data_path, "original_lowered.csv")
+    original_lowered_csv = get_data_path("original_lowered.csv")
 
     root = Node(None)
     df = (
@@ -307,9 +305,7 @@ class Alias:
         :return: None
         Find exact matches of mnemonics in mnemonic dictionary
         """
-        comprehensive_dictionary_csv = os.path.join(
-            alaska_data_path, "comprehensive_dictionary.csv"
-        )
+        comprehensive_dictionary_csv = get_data_path("comprehensive_dictionary.csv")
 
         df = (
             pd.read_csv(comprehensive_dictionary_csv)
