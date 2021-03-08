@@ -84,7 +84,7 @@ def test_parse_directory_1():
     have3 = aliased.get("gamma ray", None)
 
     # Aliased
-    assert have1 == ["DPHI"]
+    assert have1 == ['DPHI', 'DPHZ', 'RHOZ']
     assert have2 == ["DEPT"]
     assert have3 == ["GR"]
 
@@ -102,7 +102,7 @@ def test_parse_directory_2():
     aliased, not_aliased = aliaser.parse_directory(test_dir_1)
     have1 = aliased.get("density porosity", None)
     have2 = aliased.get("medium conductivity", None)
-    assert have1 == ["DPHI"]
+    assert have1 ==  ['DPHI', 'DPHZ']
     assert have2 == ["DEPT"]
     assert "empty" in not_aliased
 
