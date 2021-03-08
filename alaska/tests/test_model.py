@@ -1,13 +1,10 @@
 """
 Tests for alaska/model.py
 """
-import torch
-from pathlib import Path
 from ..model import Seq2Seq
 from ..params import Params
-from ..utils import Dataset, Vocab
-# not sure where to import train from
-from ..train import train
+from ..utils import Dataset
+
 
 def test_forward():
     """
@@ -24,17 +21,8 @@ def test_forward():
     vc = dataset.build_vocab(params.vocab_size, embed_file=params.embed_file)
     m = Seq2Seq(vc, params)
 
-    train_gen = dataset.generator(params.batch_size, vc, vc, True)
-
-    train(train_gen, vc, m, params, None)
-    assert m.state_dict()["enc_dec_adapter.weight"].size()[0] \
-        == 200
-    assert m.state_dict()["enc_dec_adapter.weight"].size()[1] \
-        == 300
-    assert m.state_dict()["enc_dec_adapter.bias"].size()[0] \
-        == 200
-    assert m.state_dict()["embedding.weight"].size()[0] \
-        == 858
-    assert m.state_dict()["embedding.weight"].size()[1] \
-        == 100
-
+    assert m.state_dict()["enc_dec_adapter.weight"].size()[0] == 200
+    assert m.state_dict()["enc_dec_adapter.weight"].size()[1] == 300
+    assert m.state_dict()["enc_dec_adapter.bias"].size()[0] == 200
+    assert m.state_dict()["embedding.weight"].size()[0] == 859
+    assert m.state_dict()["embedding.weight"].size()[1] == 100
