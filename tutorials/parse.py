@@ -15,13 +15,12 @@ synonymous mnemonics are grouped under the same label.
 
 See example below.
 """
-import os
 
 from welly import Project
 
 from alaska import Alias, get_data_path
 
-path = str(get_data_path("testcase1.las"))
+PATH = str(get_data_path("722436A.las"))
 
 
 # initialize aliaser
@@ -32,7 +31,7 @@ a = Alias()
 
 # the parse function returns two dictionaries, one for parsed
 # and another one for mnemonics not found using the aliaser
-parsed, not_found = a.parse(path)
+parsed, not_found = a.parse(PATH)
 
 # print aliased mnemonics to screen
 print("*" * 10, "Aliased dictionary", "*" * 10)
@@ -42,7 +41,7 @@ print("Not parsed with Aliaser:", not_found)
 
 # feed parsed dictionary into welly, and leave the not aliased
 # ones alone
-p = Project.from_las(path)
+p = Project.from_las(PATH)
 data = p.df(keys=list(parsed.keys()), alias=parsed)
 print(data)
 
