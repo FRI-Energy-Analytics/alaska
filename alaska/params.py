@@ -9,6 +9,7 @@ class Params:
     """
     Parameters for the Pointer generator model trainng
     """
+
     # Model architecture
     vocab_size: int = 30000
     hidden_size: int = (
