@@ -204,17 +204,20 @@ def search_child(node, description):
 class Alias:
     """
     :param dictionary: boolean for dictionary aliasing
+    :param custom_dict: string path to a custom dictionary
     :param keyword_extractor: boolean for keyword extractor aliasing
     :param model: boolean for model aliasing
+    :param prob_cutoff: probability cutoff for pointer generator model
     :return: dictionary of mnemonics and labels, list of mnemonics that can't be aliased
     Parses LAS file and returns parsed mnemonics with labels
     """
 
     # Constructor
     def __init__(
-        self, dictionary=True, keyword_extractor=True, model=False, prob_cutoff=0.5
+        self, dictionary=True, custom_dict=None, keyword_extractor=True, model=False, prob_cutoff=0.5
     ):
         self.dictionary = dictionary
+        self.custom_dict = custom_dict
         self.keyword_extractor = keyword_extractor
         self.prob_cutoff = prob_cutoff
         self.model = model
@@ -299,13 +302,16 @@ class Alias:
         fig = sns.heatmap(result)
         return fig
 
-    def dictionary_parse(self, mnem):
+    def dictionary_parse(self, mnem, custom_dict):
         """
         :param mnem: list of mnemonics
         :return: None
         Find exact matches of mnemonics in mnemonic dictionary
         """
-        comprehensive_dictionary_csv = get_data_path("comprehensive_dictionary.csv")
+        if custom_dict not None:
+            comprehensive_dictionary_csv = custom_dict
+        else:
+            comprehensive_dictionary_csv = get_data_path("comprehensive_dictionary.csv")
 
         df = (
             pd.read_csv(comprehensive_dictionary_csv)
