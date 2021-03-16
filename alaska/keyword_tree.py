@@ -302,14 +302,14 @@ class Alias:
         fig = sns.heatmap(result)
         return fig
 
-    def dictionary_parse(self, mnem, custom_dict):
+    def dictionary_parse(self, mnem):
         """
         :param mnem: list of mnemonics
         :return: None
         Find exact matches of mnemonics in mnemonic dictionary
         """
-        if custom_dict not None:
-            comprehensive_dictionary_csv = custom_dict
+        if self.custom_dict is not None:
+            comprehensive_dictionary_csv = self.custom_dict
         else:
             comprehensive_dictionary_csv = get_data_path("comprehensive_dictionary.csv")
 
