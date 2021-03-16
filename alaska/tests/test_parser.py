@@ -79,7 +79,7 @@ def test_parse_custom():
     """
     Test that the Aliaser can load and parse with a custom dictionary
     """
-    aliaser = Alias(dictionary=True, custom_dict=test_custom_dict)
+    aliaser = Alias(dictionary=True, custom_dict=test_custom_dict, keyword_extractor=False)
     result, not_found = aliaser.parse(test_case_6)
     assert result == {
         "caliper": ["CALI"],
