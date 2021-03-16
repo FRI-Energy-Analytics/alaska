@@ -309,8 +309,6 @@ class Alias:
 
         df = (
             pd.read_csv(comprehensive_dictionary_csv)
-            .drop("Unnamed: 0", 1)
-            .reset_index(drop=True)
         )
         print("Alasing with dictionary...")
         dic = df.apply(lambda x: x.astype(str).str.lower())
