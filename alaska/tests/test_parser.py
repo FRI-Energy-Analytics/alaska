@@ -5,6 +5,8 @@ from pathlib import Path
 import pytest
 from ..keyword_tree import Alias, search, make_tree, search_child, Node
 from ..predict_from_model import make_prediction
+from ..get_data_path import get_data_path
+
 
 test_case_1 = Path("alaska/data/testcase1.las")
 test_case_2 = Path("alaska/data/testcase2.las")
@@ -12,7 +14,8 @@ test_case_3 = Path("alaska/data/testcase3.las")
 test_case_4 = str(Path("alaska/data/testcase4.gz").resolve())
 test_case_5 = Path("alaska/data/testcase5.las")
 test_case_6 = Path("alaska/data/722319B.las")
-test_custom_dict = Path("alaska/data/custom_search.csv")
+test_custom_dict_csv = str(get_data_path("custom_search.csv"))
+test_custom_dict_json = str(get_data_path("crains.json"))
 test_dir_1 = Path("alaska/data/")
 
 
@@ -75,12 +78,12 @@ def test_parse_2():
     assert result == ({"depth": ["DEPT"], "gamma ray": ["GR"]}, ["empty"])
 
 
-def test_parse_custom():
+def test_parse_custom_csv():
     """
-    Test that the Aliaser can load and parse with a custom dictionary
+    Test that the Aliaser can load and parse with a custom csv dictionary
     """
     aliaser = Alias(
-        dictionary=True, custom_dict=test_custom_dict, keyword_extractor=False
+        dictionary=True, custom_dict=test_custom_dict_csv, keyword_extractor=False
     )
     result, not_found = aliaser.parse(test_case_6)
     assert result == {
@@ -94,6 +97,39 @@ def test_parse_custom():
     }
     assert not_found[0] == "dept"
     assert not_found[-1] == "tens"
+
+
+def test_parse_custom_json():
+    """
+    Test that the Aliaser can load and parse with a custom json dictionary
+    """
+    aliaser = Alias(
+        dictionary=True, custom_dict=test_custom_dict_json, keyword_extractor=False
+    )
+    result, not_found = aliaser.parse(test_case_6)
+    assert result == {
+        "cal": ["CALI"],
+        "phid": ["DPHI"],
+        "dcor": ["DRHO"],
+        "gr": ["GR"],
+        "phin": ["NPHI"],
+        "pe": ["PE"],
+        "dens": ["RHOB"],
+        "sp": ["SP"],
+    }
+    assert not_found[0] == "dept"
+    assert not_found[-1] == "tens"
+
+
+def test_custom_fail():
+    """
+    Test that the Aliaser prints error message for wrong custom dict data type
+    """
+    aliaser = Alias(
+        dictionary=True, custom_dict=str(test_case_6), keyword_extractor=False
+    )
+    with pytest.raises(IOError):
+        aliaser.parse(test_case_6)
 
 
 def test_parse_directory_1():
