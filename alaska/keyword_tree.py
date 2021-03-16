@@ -325,10 +325,10 @@ class Alias:
             with open(file_path) as json_file:
                 dictionary = json.load(json_file)
             comprehensive_dictionary = self._dict_to_table(dicts=dictionary)
-        if os.path.isfile(file_path) and file_path.endswith(".csv"):
+        elif os.path.isfile(file_path) and file_path.endswith(".csv"):
             comprehensive_dictionary = self.custom_dict
-        else:
-            print("Please check your dictionary type. AlasKA only accepts json and csv")
+        elif os.path.isfile(file_path) and not file_path.endswith(".json") or file_path.endswith(".csv"):
+            raise IOError("Please check your dictionary type. AlasKA only accepts json and csv")
         if isinstance(comprehensive_dictionary, pd.DataFrame):
             lookup_df = comprehensive_dictionary
         elif isinstance(comprehensive_dictionary, str):
@@ -346,6 +346,8 @@ class Alias:
             df = pd.read_csv(comprehensive_dictionary_csv)
         else:
             df = self._file_type_check(self.custom_dict)
+        if not isinstance(df, pd.DataFrame):
+                return ValueError("The dictionary dataframe is empty, please check your custom dictionary")
         print("Alasing with dictionary...")
         dic = df.apply(lambda x: x.astype(str).str.lower())
         aliased = 0
