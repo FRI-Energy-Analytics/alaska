@@ -11,6 +11,8 @@ test_case_2 = Path("alaska/data/testcase2.las")
 test_case_3 = Path("alaska/data/testcase3.las")
 test_case_4 = str(Path("alaska/data/testcase4.gz").resolve())
 test_case_5 = Path("alaska/data/testcase5.las")
+test_case_6 = Path("alaska/data/722319B.las")
+test_custom_dict = Path("alaska/data/custom_search.csv")
 test_dir_1 = Path("alaska/data/")
 
 
@@ -71,6 +73,65 @@ def test_parse_2():
     aliaser = Alias()
     result = aliaser.parse(test_case_5)
     assert result == ({"depth": ["DEPT"], "gamma ray": ["GR"]}, ["empty"])
+
+
+def test_parse_custom():
+    """
+    Test that the Aliaser can load and parse with a custom dictionary
+    """
+    aliaser = Alias(dictionary=True, custom_dict=test_custom_dict)
+    result, not_found = aliaser.parse(test_case_6)
+    assert result == {
+        "caliper": ["CALI"],
+        "density porosity": ["DPHI"],
+        "density correction": ["DRHO"],
+        "gamma ray": ["GR"],
+        "deep conductivity": ["HDCN"],
+        "deep resistivity": ["HDRS"],
+        "medium resistivity": ["HMRS"],
+    }
+    assert not_found == [
+        "dept",
+        "dfl",
+        "fdsn",
+        "ndsn",
+        "nphi",
+        "nrat",
+        "pe",
+        "rhob",
+        "sp",
+        "tens",
+        "dept",
+        "dfl",
+        "fdsn",
+        "ndsn",
+        "nphi",
+        "nrat",
+        "pe",
+        "rhob",
+        "sp",
+        "tens",
+        "dept",
+        "dfl",
+        "fdsn",
+        "ndsn",
+        "nphi",
+        "nrat",
+        "pe",
+        "rhob",
+        "sp",
+        "tens",
+        "dept",
+        "dfl",
+        "fdsn",
+        "ndsn",
+        "nphi",
+        "nrat",
+        "pe",
+        "rhob",
+        "sp",
+        "tens",
+    ]
 
 
 def test_parse_directory_1():
