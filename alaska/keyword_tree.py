@@ -327,13 +327,12 @@ class Alias:
             comprehensive_dictionary = self._dict_to_table(dicts=dictionary)
         if os.path.isfile(file_path) and file_path.endswith(".csv"):
             comprehensive_dictionary = self.custom_dict
-
+        else:
+            print("Please check your dictionary type. AlasKA only accepts json and csv")
         if isinstance(comprehensive_dictionary, pd.DataFrame):
             lookup_df = comprehensive_dictionary
         elif isinstance(comprehensive_dictionary, str):
             lookup_df = pd.read_csv(comprehensive_dictionary)
-        else:
-            print("Please check your dictionary type. AlasKA only accepts json and csv")
         return lookup_df
 
     def dictionary_parse(self, mnem):
