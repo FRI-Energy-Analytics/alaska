@@ -2,6 +2,7 @@
 Tests for Alaska's parser classes and functions
 """
 from pathlib import Path
+import matplotlib.pyplot as plt
 import pytest
 from ..keyword_tree import Alias, search, make_tree, search_child, Node
 from ..predict_from_model import make_prediction
@@ -290,3 +291,13 @@ def test_make_prediction():
     result = make_prediction(test_case_4)
     assert result[0] == {"qn": "near quality"}
     assert result[1]["qn"] == pytest.approx(0.8421125945781427, rel=1e-4)
+
+
+def test_heatmap():
+    """
+    Test that the aliaser can create a heatmap
+    """
+    aliaser = Alias()
+    aliaser.parse(test_case_6)
+    aliaser.heatmap()
+    plt.gcf().canvas.draw()
