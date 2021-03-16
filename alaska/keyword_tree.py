@@ -3,6 +3,7 @@ contains the keyword tree extractor and alias class
 """
 import os.path
 import gzip
+import json
 
 import pandas as pd
 import seaborn as sns
@@ -200,7 +201,7 @@ def search_child(node, description):
 class Alias:
     """
     :param dictionary: boolean for dictionary aliasing
-    :param custom_dict: string path to a custom dictionary
+    :param custom_dict: string path to a custom dictionary in either .json or .csv format
     :param keyword_extractor: boolean for keyword extractor aliasing
     :param model: boolean for model aliasing
     :param prob_cutoff: probability cutoff for pointer generator model
@@ -303,18 +304,49 @@ class Alias:
         fig = sns.heatmap(result)
         return fig
 
+    def _dict_to_table(self, dicts):
+        """
+        :param dicts: python dictionary
+        Converts a dictionary to mnemonic lookup table for dictionary parsing
+        """
+        dictlist = []
+        for key, value in dicts.items():
+            for item in value:
+                dictlist.append([item, key])
+        lookup_table = pd.DataFrame(dictlist, columns=["mnemonics", "label"])
+        return lookup_table
+
+    def _file_type_check(self, file_path):
+        """
+        :param file_path: string filepath to dictionary either .json or .csv
+        Checks file path and converts json to lookup table, passes .csv to dictionary_parse
+        """
+        if os.path.isfile(file_path) and file_path.endswith(".json"):
+            with open(file_path) as json_file:
+                dictionary = json.load(json_file)
+            comprehensive_dictionary = self._dict_to_table(dicts=dictionary)
+        if os.path.isfile(file_path) and file_path.endswith(".csv"):
+            comprehensive_dictionary = self.custom_dict
+
+        if isinstance(comprehensive_dictionary, pd.DataFrame):
+            lookup_df = comprehensive_dictionary
+        elif isinstance(comprehensive_dictionary, str):
+            lookup_df = pd.read_csv(comprehensive_dictionary)
+        else:
+            print("Please check your dictionary type. AlasKA only accepts json and csv")
+        return lookup_df
+
     def dictionary_parse(self, mnem):
         """
         :param mnem: list of mnemonics
         :return: None
         Find exact matches of mnemonics in mnemonic dictionary
         """
-        if self.custom_dict is not None:
-            comprehensive_dictionary_csv = self.custom_dict
-        else:
+        if self.custom_dict is None:
             comprehensive_dictionary_csv = get_data_path("comprehensive_dictionary.csv")
-
-        df = pd.read_csv(comprehensive_dictionary_csv)
+            df = pd.read_csv(comprehensive_dictionary_csv)
+        else:
+            df = self._file_type_check(self.custom_dict)
         print("Alasing with dictionary...")
         dic = df.apply(lambda x: x.astype(str).str.lower())
         aliased = 0
