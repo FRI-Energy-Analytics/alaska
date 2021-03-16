@@ -35,11 +35,7 @@ def make_tree():
     original_lowered_csv = get_data_path("original_lowered.csv")
 
     root = Node(None)
-    df = (
-        pd.read_csv(original_lowered_csv)
-        .drop("Unnamed: 0", 1)
-        .reset_index(drop=True)
-    )
+    df = pd.read_csv(original_lowered_csv).drop("Unnamed: 0", 1).reset_index(drop=True)
     arr = df.label.unique()
     cali_arr = ["calibration", "diameter", "radius"]
     time_arr = ["time", "delta-t", "dt", "delta"]
@@ -214,7 +210,12 @@ class Alias:
 
     # Constructor
     def __init__(
-        self, dictionary=True, custom_dict=None, keyword_extractor=True, model=False, prob_cutoff=0.5
+        self,
+        dictionary=True,
+        custom_dict=None,
+        keyword_extractor=True,
+        model=False,
+        prob_cutoff=0.5,
     ):
         self.dictionary = dictionary
         self.custom_dict = custom_dict
@@ -313,9 +314,7 @@ class Alias:
         else:
             comprehensive_dictionary_csv = get_data_path("comprehensive_dictionary.csv")
 
-        df = (
-            pd.read_csv(comprehensive_dictionary_csv)
-        )
+        df = pd.read_csv(comprehensive_dictionary_csv)
         print("Alasing with dictionary...")
         dic = df.apply(lambda x: x.astype(str).str.lower())
         aliased = 0
