@@ -31,55 +31,6 @@ def decode_batch_output(
         decoded_batch.append(decoded_doc)
     return decoded_batch
 
-
-def decode_batch(
-    batch: Batch,
-    model: Seq2Seq,
-    vocab: Vocab,
-    criterion=None,
-    *,
-    pack_seq=True,
-    show_cover_loss=False
-) -> Tuple[List[List[str]], Seq2SeqOutput]:
-    """Test the `model` on the `batch`, return the decoded textual tokens and the Seq2SeqOutput."""
-    if not pack_seq:
-        input_lengths = None
-    else:
-        input_lengths = batch.input_lengths
-    with torch.no_grad():
-        input_tensor = batch.input_tensor.to(DEVICE)
-        if batch.target_tensor is None or criterion is None:
-            target_tensor = None
-        else:
-            target_tensor = batch.target_tensor.to(DEVICE)
-        out = model(
-            input_tensor,
-            target_tensor,
-            input_lengths,
-            criterion,
-            ext_vocab_size=batch.ext_vocab_size,
-            include_cover_loss=show_cover_loss,
-        )
-        decoded_batch = decode_batch_output(out.decoded_tokens, vocab, batch.oov_dict)
-    target_length = batch.target_tensor.size(0)
-    out.loss_value /= target_length
-    return decoded_batch, out
-
-
-def decode_one(*args, **kwargs):
-    """
-    Same as `decode_batch()` but because batch size is 1, the batch dim in visualization data is
-    eliminated.
-    """
-    decoded_batch, out = decode_batch(*args, **kwargs)
-    decoded_doc = decoded_batch[0]
-    if out.enc_attn_weights is not None:
-        out.enc_attn_weights = out.enc_attn_weights[: len(decoded_doc), 0, :]
-    if out.ptr_probs is not None:
-        out.ptr_probs = out.ptr_probs[: len(decoded_doc), 0]
-    return decoded_doc, out
-
-
 def eval_bs_batch(
     batch: Batch,
     model: Seq2Seq,
