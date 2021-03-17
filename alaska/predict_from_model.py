@@ -31,6 +31,7 @@ def decode_batch_output(
         decoded_batch.append(decoded_doc)
     return decoded_batch
 
+
 def eval_bs_batch(
     batch: Batch,
     model: Seq2Seq,
