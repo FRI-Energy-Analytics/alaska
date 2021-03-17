@@ -2,8 +2,9 @@
 Tests for alaska/utils.py
 """
 from pathlib import Path
+import matplotlib.pyplot as plt
 from ..params import Params
-from ..utils import Dataset, Vocab
+from ..utils import Dataset, Vocab, show_plot, show_attention_map
 
 
 def test_vocab_add_words():
@@ -139,3 +140,46 @@ def test_dataset_2():
         filename.unlink()
     except FileNotFoundError:
         pass
+
+
+def test_show_plot():
+    """
+    Test show_plot function can save to disk
+    """
+    loss = [10, 9, 8]
+    step = 1
+    val_loss = [1, 2, 3]
+    val_metric = [3, 2, 1]
+    val_step = 1
+    file_prefix = "show_plot_test"
+    show_plot(
+        loss=loss,
+        step=step,
+        val_loss=val_loss,
+        val_metric=val_metric,
+        val_step=val_step,
+        file_prefix=file_prefix,
+    )
+    filename = Path(file_prefix).with_suffix("").with_suffix(".png")
+    assert str(filename) == "show_plot_test.png"
+    try:
+        filename.unlink()
+    except FileNotFoundError:
+        pass
+
+
+def test_show_attention_map():
+    """
+    Test show_attention_map function can create a plot without failure
+    """
+    source = ["environmentally", "corrected", "gamma", "ray"]
+    preds = ["gamma", "ray"]
+    attention = [[1, 0, 0, 0], [0, 2, 0, 0], [0, 0, 4, 0], [0, 0, 0, 5]]
+    point_ratio = [1, 2, 3]
+    show_attention_map(
+        src_words=source,
+        pred_words=preds,
+        attention=attention,
+        pointer_ratio=point_ratio,
+    )
+    plt.gcf().canvas.draw()
