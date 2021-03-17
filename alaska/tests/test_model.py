@@ -77,6 +77,7 @@ def test_model_eval():
         sample=sample,
         ext_vocab_size=ext_vocab_size,
         include_cover_loss=show_cover_loss,
+        visualize=True,
     )
 
     assert forward_pass.loss.item() > 12
