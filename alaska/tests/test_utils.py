@@ -2,8 +2,9 @@
 Tests for alaska/utils.py
 """
 from pathlib import Path
+import matplotlib.pyplot as plt
 from ..params import Params
-from ..utils import Dataset, Vocab, show_plot
+from ..utils import Dataset, Vocab, show_plot, show_attention_map
 
 
 def test_vocab_add_words():
@@ -165,3 +166,20 @@ def test_show_plot():
         filename.unlink()
     except FileNotFoundError:
         pass
+
+
+def test_show_attention_map():
+    """
+    Test show_attention_map function can create a plot without failure
+    """
+    source = ["environmentally", "corrected", "gamma", "ray"]
+    preds = ["gamma", "ray"]
+    attention = [[1, 0, 0, 0], [0, 2, 0, 0], [0, 0, 4, 0], [0, 0, 0, 5]]
+    point_ratio = [1, 2, 3]
+    show_attention_map(
+        src_words=source,
+        pred_words=preds,
+        attention=attention,
+        pointer_ratio=point_ratio,
+    )
+    plt.gcf().canvas.draw()
