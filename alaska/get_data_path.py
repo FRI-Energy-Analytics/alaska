@@ -1,3 +1,6 @@
+# Copyright (c) 2021 The AlasKA Developers.
+# Distributed under the terms of the MIT License.
+# SPDX-License_Identifier: MIT
 """
 Utility function to reliably get AlasKA data files from the package data
 location whether it is a regular package install (pip install alaska) or a

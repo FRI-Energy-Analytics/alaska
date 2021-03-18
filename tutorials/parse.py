@@ -1,3 +1,6 @@
+# Copyright (c) 2021 The AlasKA Developers.
+# Distributed under the terms of the MIT License.
+# SPDX-License_Identifier: MIT
 """
 Parsing mnemonics of a LAS file
 ===============================
