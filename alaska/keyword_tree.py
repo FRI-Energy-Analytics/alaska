@@ -1,3 +1,6 @@
+# Copyright (c) 2021 The AlasKA Developers.
+# Distributed under the terms of the MIT License.
+# SPDX-License_Identifier: MIT
 """
 contains the keyword tree extractor and alias class
 """
