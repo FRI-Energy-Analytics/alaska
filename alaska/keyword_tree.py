@@ -266,7 +266,7 @@ class Alias:
         comprehensive_dict = {}
         comprehensive_not_found = []
         for filename in os.listdir(directory):
-            if filename.endswith(".las"):
+            if filename.endswith((".LAS",".las")):
                 path = os.path.join(directory, filename)
                 las = lasio.read(path)
                 mnem, desc = [], []
