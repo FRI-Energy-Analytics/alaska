@@ -272,7 +272,7 @@ class Alias:
                 try:
                     las = lasio.read(path)
                 except:
-                    logging.warning(f"lasio was not able to parse {filename}")
+                    logging.warning(f"lasio was not able to read {filename}")
                     continue
                 las = lasio.read(path)
                 mnem, desc = [], []
