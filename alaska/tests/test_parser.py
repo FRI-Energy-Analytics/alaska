@@ -199,6 +199,15 @@ def test_parse_directory_2():
     assert "empty" in not_aliased
 
 
+def test_parse_directory_3():
+    """
+    Test that Aliaser can parse .LAS and .las
+    """
+    aliaser = Alias()
+    aliased, _ = aliaser.parse_directory(test_dir_1)
+    assert len(aliased.keys()) > 0
+
+
 def test_dictionary_parse_1():
     """
     Test that dictionary parser in Aliaser parses and returns correct labels
