@@ -29,6 +29,7 @@
 Parameters for the pointer generator model
 """
 from typing import Optional
+from .get_data_path import get_data_path
 
 
 class Params:
@@ -106,11 +107,12 @@ class Params:
     )
 
     # Data
-    embed_file: Optional[
-        str
-    ] = "alaska/data/.vector_cache/glove.6B.100d.txt"  # use pre-trained embeddings
-    data_path: str = "alaska/data/mnem.gz"
-    val_data_path: Optional[str] = "alaska/data/mnem.val.gz"
+    embed_file: Optional[str] = get_data_path(
+        "glove.6B.100d.txt"
+    )  # use pre-trained embeddings
+    data_path: str = str(get_data_path("mnem.gz"))
+    # below is validation data commented out for now
+    # val_data_path: Optional[str] = str(get_data_path("mnem.val.gz"))
     max_src_len: int = 400  # exclusive of special tokens such as EOS
     max_tgt_len: int = 100  # exclusive of special tokens such as EOS
     truncate_src: bool = (
@@ -131,7 +133,8 @@ class Params:
     min_out_len: int = 60
     max_out_len: Optional[int] = 100
     out_len_in_words: bool = False
-    test_data_path: str = "alaska/data/mnem.test.gz"
+    # below is test data commented out for now
+    # test_data_path: str = str(get_data_path("mnem.test.gz"))
     test_sample_ratio: float = (
         1  # what portion of the test data is used? (1 for all data)
     )

@@ -35,6 +35,7 @@ import torch
 from .utils import Vocab, OOVDict, Batch, format_tokens, Dataset
 from .model import DEVICE, Seq2SeqOutput, Seq2Seq
 from .params import Params
+from .get_data_path import get_data_path
 
 
 def decode_batch_output(
@@ -127,9 +128,9 @@ def eval_bs(test_set: Dataset, vocab: Vocab, model: Seq2Seq, params: Params):
     """
     test_gen = test_set.generator(1, vocab, None, True if params.pointer else False)
     n_samples = int(params.test_sample_ratio * len(test_set.pairs))
-
+    save_path = str(get_data_path("results.tgz"))
     if params.test_save_results and params.model_path_prefix:
-        result_file = tarfile.open("alaska/data/results.tgz", "w:gz")
+        result_file = tarfile.open(save_path, "w:gz")
     output, prob_output = {}, {}
     model.eval()
     for _ in range(1, n_samples + 1):
@@ -167,7 +168,8 @@ def make_prediction(test_path):
     )
     v = dataset.build_vocab(p.vocab_size, embed_file=p.embed_file)
     m = Seq2Seq(v, p)
-    m.load_state_dict(torch.load("alaska/data/state_dict.pth"))
+    state_dict_path = str(get_data_path("state_dict.pth"))
+    m.load_state_dict(torch.load(state_dict_path))
     m.encoder.gru.flatten_parameters()
     m.decoder.gru.flatten_parameters()
 

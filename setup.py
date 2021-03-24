@@ -45,6 +45,7 @@ if __name__ == "__main__":
         fullname=FULLNAME,
         description=DESCRIPTION,
         long_description=LONG_DESCRIPTION,
+        long_description_content_type="text/markdown",
         version=VERSION,
         author=AUTHOR,
         author_email=AUTHOR_EMAIL,
