@@ -7,6 +7,7 @@ contains the keyword tree extractor and alias class
 import os.path
 import gzip
 import json
+import logging
 
 import pandas as pd
 import seaborn as sns
@@ -266,8 +267,13 @@ class Alias:
         comprehensive_dict = {}
         comprehensive_not_found = []
         for filename in os.listdir(directory):
-            if filename.endswith((".LAS",".las")):
+            if filename.endswith((".LAS", ".las")):
                 path = os.path.join(directory, filename)
+                try:
+                    las = lasio.read(path)
+                except:
+                    logging.warning(f"lasio was not able to read {filename}")
+                    continue
                 las = lasio.read(path)
                 mnem, desc = [], []
                 for key in las.keys():

@@ -36,6 +36,7 @@ Tests for Alaska's parser classes and functions
 from pathlib import Path
 import matplotlib.pyplot as plt
 import pytest
+import logging
 from ..keyword_tree import Alias, search, make_tree, search_child, Node
 from ..predict_from_model import make_prediction
 from ..get_data_path import get_data_path
@@ -206,6 +207,15 @@ def test_parse_directory_3():
     aliaser = Alias()
     aliased, _ = aliaser.parse_directory(test_dir_1)
     assert len(aliased.keys()) > 0
+
+
+def test_parse_directory_4(caplog):
+    """
+    Test that Alias class returns a warning for empty LAS file
+    """
+    aliaser = Alias()
+    aliaser.parse_directory(test_dir_1)
+    assert "lasio was not able to read testcase6.LAS" in caplog.text
 
 
 def test_dictionary_parse_1():
