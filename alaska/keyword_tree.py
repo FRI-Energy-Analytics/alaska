@@ -437,8 +437,8 @@ class Alias:
         :return: compressed file of summaries used to generate labels
         Build input file for pointer generator
         """
-        data_path = "alaska/data/"
-        test_out = gzip.open(os.path.join(data_path, "input.gz"), "wt")
+        data_path = get_data_path("input.gz")
+        test_out = gzip.open(data_path, "wt")
         for i in range(len(df)):
             fout = test_out
             lst = [df.description[i], df.units[i], df.mnemonics[i]]
@@ -446,7 +446,7 @@ class Alias:
             fout.write(" ".join(lst) + "\t" + " ".join(summary) + "\n")
             fout.flush()
         test_out.close()
-        return os.path.join(data_path, "input.gz")
+        return str(data_path)
 
     def make_df(self, path):
         """
