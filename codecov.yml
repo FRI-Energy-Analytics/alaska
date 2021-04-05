@@ -11,5 +11,5 @@ coverage:
         base: auto
 
 ignore:
-  - "alaska/tests/*”
+  - "alaska/tests/*"
   - "alaska/_version.py"
