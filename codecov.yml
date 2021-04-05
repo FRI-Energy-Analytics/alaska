@@ -1,0 +1,3 @@
+ignore:
+  - "*/tests/*”
+  - "_version.py"
