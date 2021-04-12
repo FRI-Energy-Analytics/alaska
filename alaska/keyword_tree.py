@@ -438,7 +438,7 @@ class Alias:
         Build input file for pointer generator
         """
         data_path = get_data_path("input.gz")
-        test_out = gzip.open(data_path, "wt")
+        test_out = gzip.open(data_path, "wt", encoding="utf-8")
         for i in range(len(df)):
             fout = test_out
             lst = [df.description[i], df.units[i], df.mnemonics[i]]
