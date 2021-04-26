@@ -34,11 +34,10 @@
 Tests for Alaska's parser classes and functions
 """
 from pathlib import Path
+import os
 import matplotlib.pyplot as plt
 import pandas as pd
-import os
 import pytest
-import logging
 from ..keyword_tree import Alias, search, make_tree, search_child, Node
 from ..predict_from_model import make_prediction
 from ..get_data_path import get_data_path
@@ -365,10 +364,10 @@ def test_add_to_dict():
     )
     aliaser.parse(test_case_6)
     aliaser.add_to_dictionary()
-    path_to_comp_dict = get_data_path('comprehensive_dictionary.csv')
+    path_to_comp_dict = get_data_path("comprehensive_dictionary.csv")
     comprehensive = pd.read_csv(path_to_comp_dict)
-    assert comprehensive.shape == (1285,2)
-    comprehensive.drop([1281,1282,1283,1284], inplace=True)
+    assert comprehensive.shape == (1285, 2)
+    comprehensive.drop([1281, 1282, 1283, 1284], inplace=True)
     # re-save the comprehensive dict without the new aliases
     comprehensive.to_csv(path_to_comp_dict)
 
@@ -381,10 +380,10 @@ def test_add_to_dict_path():
         dictionary=True, keyword_extractor=True, model=True, prob_cutoff=0.85
     )
     aliaser.parse(test_case_6)
-    tmp_file = str(test_dir_1) + '\\custom_dict.csv'
+    tmp_file = str(test_dir_1) + "\\custom_dict.csv"
     aliaser.add_to_dictionary(path=tmp_file)
     custom_dict = pd.read_csv(tmp_file)
-    assert custom_dict.shape == (1285,2)
+    assert custom_dict.shape == (1285, 2)
     os.remove(tmp_file)
 
 
@@ -398,6 +397,7 @@ def test_add_fail_1():
     with pytest.raises(ValueError):
         aliaser.add_to_dictionary(test_case_6)
 
+
 def test_add_fail_2():
     """
     Test that the add_to_dict prints error message for bad path (without .csv)
@@ -407,7 +407,7 @@ def test_add_fail_2():
     )
     aliaser.parse(test_case_6)
     with pytest.raises(IOError):
-        aliaser.add_to_dictionary(path=str(test_dir_1) +'bad_name')
+        aliaser.add_to_dictionary(path=str(test_dir_1) + "bad_name")
 
 
 """
