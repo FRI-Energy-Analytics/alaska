@@ -470,4 +470,4 @@ BAD_ALIAS = ['running quality', 'avg count', 'ccl quality', 'pit pit', '8 ittt',
  'shallow ind.', 'medium map', 'factor quality', 'tvd tvd', 'formation quality', '6 effect', 'cond quality', 'correction quality', 'far correction',
  'neutron spaced', 'microlognormal ohmm', 'g/cc correction', 'rxrt quality', 'microlog 16', 'medium kev)', 'ohm-m ohm-m', 'pulse resistivity', 'll8 quality', 'from quality',
 'medium medium', 'deep ohmm', 'gapi gapi', 'of resistivity', 'medium {f11.4}', 'shallow curve', 'from medium', 'photoelectric photoelectric',
- '% quality', 'far medium', 'phase resistivity', 'ppm quality', 'deep processing', 'caliper {f13.4}', 'decp quality', 'far quality', 'near quality', 'spectral empty']
+ '% quality', 'far medium', 'phase resistivity', 'ppm quality', 'deep processing', 'caliper {f13.4}', 'decp quality', 'far quality', 'spectral empty']
