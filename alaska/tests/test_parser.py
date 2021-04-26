@@ -368,7 +368,7 @@ def test_add_to_dict():
     path_to_comp_dict = get_data_path('comprehensive_dictionary.csv')
     comprehensive = pd.read_csv(path_to_comp_dict)
     assert comprehensive.shape == (1285,2)
-    comprehensive.drop([1281,1282,1283,1284])
+    comprehensive.drop([1281,1282,1283,1284], inplace=True)
     # re-save the comprehensive dict without the new aliases
     comprehensive.to_csv(path_to_comp_dict)
 
