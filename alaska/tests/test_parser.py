@@ -405,8 +405,9 @@ def test_add_fail_2():
     aliaser = Alias(
         dictionary=True, keyword_extractor=True, model=True, prob_cutoff=0.85
     )
+    aliaser.parse(test_case_6)
     with pytest.raises(IOError):
-        aliaser.add_to_dictionary(test_case_6, path=test_dir_1 +'bad_name')
+        aliaser.add_to_dictionary(path=test_dir_1 +'bad_name')
 
 
 """
