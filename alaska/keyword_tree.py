@@ -205,11 +205,11 @@ def search_child(node, description):
 class Alias:
     """
     :param dictionary: boolean for dictionary aliasing
-    :param custom_dict: string path to a custom dictionary in either .json or .csv format
+    :param custom_dict: string path to a custom dictionary in either .json or .csv
     :param keyword_extractor: boolean for keyword extractor aliasing
     :param model: boolean for model aliasing
     :param prob_cutoff: probability cutoff for pointer generator model
-    :return: dictionary of mnemonics and labels, list of mnemonics that can't be aliased
+    :return: dictionary of mnemonics and labels, list of mnemonics not aliased
     Parses LAS file and returns parsed mnemonics with labels
     """
 
@@ -229,12 +229,12 @@ class Alias:
         self.model = model
         self.duplicate, self.not_found = [], []
         self.method, self.probability, self.mnem = [], [], []
-        self.output = {}
+        self.output, self.formatted_output = {}, {}
 
     def parse(self, path):
         """
         :param path: path to LAS file to be aliased
-        :return: dictionary of mnemonics and labels, list of mnemonics that can't be aliased
+        :return: dictionary of mnemonics and labels, list of mnemonics not aliased
         Parses LAS file and call parsers accordingly
         """
         las = lasio.read(path)
@@ -253,15 +253,14 @@ class Alias:
         if self.model is True:
             df = self.make_df(path)
             self.model_parse(df)
-        formatted_output = {}
         for key, val in self.output.items():
-            formatted_output.setdefault(val, []).append(key.upper())
-        return formatted_output, self.not_found
+            self.formatted_output.setdefault(val, []).append(key.upper())
+        return self.formatted_output, self.not_found
 
     def parse_directory(self, directory):
         """
         :param path: path to directory containing LAS files
-        :return: dictionary of mnemonics and labels, list of mnemonics that can't be aliased
+        :return: dictionary of mnemonics and labels, list of mnemonics not aliased
         Parses LAS files and call parsers accordingly
         """
         comprehensive_dict = {}
@@ -297,10 +296,9 @@ class Alias:
                 comprehensive_not_found.extend(self.not_found)
                 self.output = {}
                 self.duplicate, self.not_found = [], []
-        formatted_output = {}
         for key, val in comprehensive_dict.items():
-            formatted_output.setdefault(val, []).append(key.upper())
-        return formatted_output, comprehensive_not_found
+            self.formatted_output.setdefault(val, []).append(key.upper())
+        return self.formatted_output, comprehensive_not_found
 
     def heatmap(self):
         """
@@ -328,7 +326,7 @@ class Alias:
     def _file_type_check(self, file_path):
         """
         :param file_path: string filepath to dictionary either .json or .csv
-        Checks file path and converts json to lookup table, passes .csv to dictionary_parse
+        Checks file path converts json to lookup table, passes .csv to dictionary_parse
         """
         if os.path.isfile(file_path) and file_path.endswith(".json"):
             with open(file_path) as json_file:
@@ -470,3 +468,37 @@ class Alias:
             {"mnemonics": mnem, "description": description, "units": unit}
         )
         return output_df
+
+    def add_to_dictionary(self, path=None):
+        """
+        Adds new aliases from model and keyword extractor to comprehensive dictionary. 
+        By default it will overwrite the comprehensive dictionary
+        :param path: path to save custom dictionary, default appends comprehensive
+        """
+        if not self.formatted_output:
+            raise ValueError("The alias dictionary is empty. Please parse a LAS file")
+        new_aliases = self._dict_to_table(dicts=self.formatted_output)
+        comprehensive_dictionary_csv = pd.read_csv(
+            get_data_path("comprehensive_dictionary.csv")
+        )
+        not_in_comprehensive = new_aliases[
+            ~new_aliases["mnemonics"].isin(comprehensive_dictionary_csv["mnemonics"])
+        ]
+        munge_df = not_in_comprehensive.copy().drop("label", axis=1)
+        munge_df["label"] = not_in_comprehensive["label"].str.upper()
+        appended_df = comprehensive_dictionary_csv.append(
+            munge_df, ignore_index=True, verify_integrity=True
+        )
+        if not path:
+            appended_df.to_csv(
+                get_data_path("comprehensive_dictionary.csv"),
+                index=False,
+                columns=["mnemonics", "label"],
+            )
+        else:
+            if not path.endswith(".csv"):
+                raise IOError(
+                    "Please check your file name type. Custom paths must end with .csv"
+                )
+            else:
+                appended_df.to_csv(path, index=False, columns=["mnemonics", "label"])
