@@ -35,6 +35,8 @@ Tests for Alaska's parser classes and functions
 """
 from pathlib import Path
 import matplotlib.pyplot as plt
+import pandas as pd
+import os
 import pytest
 import logging
 from ..keyword_tree import Alias, search, make_tree, search_child, Node
@@ -352,6 +354,59 @@ def test_heatmap():
     aliaser.parse(test_case_6)
     aliaser.heatmap()
     plt.gcf().canvas.draw()
+
+
+def test_add_to_dict():
+    """
+    Test that the add_to_dictionary method writes to the comprehensive dictionary
+    """
+    aliaser = Alias(
+        dictionary=True, keyword_extractor=True, model=True, prob_cutoff=0.85
+    )
+    aliaser.parse(test_case_6)
+    aliaser.add_to_dictionary()
+    path_to_comp_dict = get_data_path('comprehensive_dictionary.csv')
+    comprehensive = pd.read_csv(path_to_comp_dict)
+    assert comprehensive.shape == (1285,2)
+    comprehensive.drop([1281,1282,1283,1284])
+    # re-save the comprehensive dict without the new aliases
+    comprehensive.to_csv(path_to_comp_dict)
+
+
+def test_add_to_dict_path():
+    """
+    Test that the add_to_dictionary method writes to a custom path
+    """
+    aliaser = Alias(
+        dictionary=True, keyword_extractor=True, model=True, prob_cutoff=0.85
+    )
+    aliaser.parse(test_case_6)
+    tmp_file = test_dir_1 + 'custom_dict.csv'
+    aliaser.add_to_dictionary(path=tmp_file)
+    custom_dict = pd.read_csv(tmp_file)
+    assert custom_dict.shape == (1285,2)
+    os.remove(tmp_file)
+
+
+def test_add_fail_1():
+    """
+    Test that the add_to_dict prints error message for empty dict
+    """
+    aliaser = Alias(
+        dictionary=True, keyword_extractor=True, model=True, prob_cutoff=0.85
+    )
+    with pytest.raises(ValueError):
+        aliaser.add_to_dictionary(test_case_6)
+
+def test_add_fail_2():
+    """
+    Test that the add_to_dict prints error message for bad path (without .csv)
+    """
+    aliaser = Alias(
+        dictionary=True, keyword_extractor=True, model=True, prob_cutoff=0.85
+    )
+    with pytest.raises(IOError):
+        aliaser.add_to_dictionary(test_case_6, path=test_dir_1 +'bad_name')
 
 
 """
