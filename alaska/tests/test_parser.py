@@ -381,11 +381,11 @@ def test_add_to_dict_path():
         dictionary=True, keyword_extractor=True, model=True, prob_cutoff=0.85
     )
     aliaser.parse(test_case_6)
-    tmp_file = test_dir_1 + 'custom_dict.csv'
+    tmp_file = str(test_dir_1) + '\\custom_dict.csv'
     aliaser.add_to_dictionary(path=tmp_file)
     custom_dict = pd.read_csv(tmp_file)
     assert custom_dict.shape == (1285,2)
-    os.remove(tmp_file)
+    # os.remove(tmp_file)
 
 
 def test_add_fail_1():
@@ -407,7 +407,7 @@ def test_add_fail_2():
     )
     aliaser.parse(test_case_6)
     with pytest.raises(IOError):
-        aliaser.add_to_dictionary(path=test_dir_1 +'bad_name')
+        aliaser.add_to_dictionary(path=str(test_dir_1) +'bad_name')
 
 
 """

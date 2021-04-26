@@ -484,12 +484,12 @@ class Alias:
         munge_df['label'] = not_in_comprehensive['label'].str.upper()
         appended_df = comprehensive_dictionary_csv.append(munge_df, ignore_index=True, verify_integrity=True)
         if not path:
-            appended_df.to_csv(get_data_path("comprehensive_dictionary.csv"), index=False)
+            appended_df.to_csv(get_data_path("comprehensive_dictionary.csv"), index=False, columns=['mnemonics', 'label'])
         else:
             if not path.endswith(".csv"):
                 raise IOError(
                 "Please check your file name type. Custom dictionary paths must end with .csv"
             )
             else:
-                appended_df.to_csv(path, index=False)
+                appended_df.to_csv(path, index=False, columns=['mnemonics', 'label'])
 
