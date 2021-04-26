@@ -255,7 +255,7 @@ def test_keyword_parse_1():
     assert "dept" in not_aliased
 
 
-def test_keyword_parse_2():  # 3725733C.las
+def test_keyword_parse_2():
     """
     Test that keyword parser in Aliaser parses and returns correct labels
     """
@@ -334,6 +334,26 @@ def test_model_parse_2():
     assert have2 == ["QN"]
     assert "qn" not in not_aliased
     assert "qn" not in aliaser.not_found
+
+
+def test_not_alias():
+    """
+    Test that the not alias BAD_ALIAS list is working for single file parse
+    """
+    aliaser = Alias(dictionary=True, keyword_extractor=True, model=True, prob_cutoff=0.001)
+    alias_dict, not_aliased = aliaser.parse(test_case_6)
+    assert not_aliased == ['FDSN']
+    assert alias_dict['depth'] == ['DEPT']
+
+
+def test_not_alias_2():
+    """
+    Test that the not alias BAD_ALIAS list is working for directory parse
+    """
+    aliaser = Alias(dictionary=True, keyword_extractor=True, model=True, prob_cutoff=0.001)
+    alias_dict, not_aliased = aliaser.parse_directory(test_dir_1)
+    assert not_aliased == ['FDSN', 'EMPTY']
+    assert alias_dict['deep resistivity'] == ['HDRS']
 
 
 def test_make_prediction():
