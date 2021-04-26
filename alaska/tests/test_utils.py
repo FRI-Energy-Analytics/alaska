@@ -216,5 +216,5 @@ def test_bad_alias():
     """
     Test the BAD_ALIAS list type and length
     """
-    assert type(BAD_ALIAS) == list
+    assert isinstance(BAD_ALIAS, list)
     assert len(BAD_ALIAS) < 650

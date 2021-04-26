@@ -340,20 +340,24 @@ def test_not_alias():
     """
     Test that the not alias BAD_ALIAS list is working for single file parse
     """
-    aliaser = Alias(dictionary=True, keyword_extractor=True, model=True, prob_cutoff=0.001)
+    aliaser = Alias(
+        dictionary=True, keyword_extractor=True, model=True, prob_cutoff=0.001
+    )
     alias_dict, not_aliased = aliaser.parse(test_case_6)
-    assert not_aliased == ['FDSN']
-    assert alias_dict['depth'] == ['DEPT']
+    assert not_aliased == ["FDSN"]
+    assert alias_dict["depth"] == ["DEPT"]
 
 
 def test_not_alias_2():
     """
     Test that the not alias BAD_ALIAS list is working for directory parse
     """
-    aliaser = Alias(dictionary=True, keyword_extractor=True, model=True, prob_cutoff=0.001)
+    aliaser = Alias(
+        dictionary=True, keyword_extractor=True, model=True, prob_cutoff=0.001
+    )
     alias_dict, not_aliased = aliaser.parse_directory(test_dir_1)
-    assert not_aliased == ['FDSN', 'EMPTY']
-    assert alias_dict['deep resistivity'] == ['HDRS']
+    assert not_aliased == ["FDSN", "EMPTY"]
+    assert alias_dict["deep resistivity"] == ["HDRS"]
 
 
 def test_make_prediction():
