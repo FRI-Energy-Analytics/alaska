@@ -253,7 +253,6 @@ class Alias:
         if self.model is True:
             df = self.make_df(path)
             self.model_parse(df)
-        # formatted_output = {}
         for key, val in self.output.items():
             self.formatted_output.setdefault(val, []).append(key.upper())
         return self.formatted_output, self.not_found
@@ -297,7 +296,6 @@ class Alias:
                 comprehensive_not_found.extend(self.not_found)
                 self.output = {}
                 self.duplicate, self.not_found = [], []
-        # formatted_output = {}
         for key, val in comprehensive_dict.items():
             self.formatted_output.setdefault(val, []).append(key.upper())
         return self.formatted_output, comprehensive_not_found

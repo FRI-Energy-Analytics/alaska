@@ -385,7 +385,7 @@ def test_add_to_dict_path():
     aliaser.add_to_dictionary(path=tmp_file)
     custom_dict = pd.read_csv(tmp_file)
     assert custom_dict.shape == (1285,2)
-    # os.remove(tmp_file)
+    os.remove(tmp_file)
 
 
 def test_add_fail_1():
