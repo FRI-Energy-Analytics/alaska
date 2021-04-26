@@ -16,6 +16,7 @@ import lasio
 # alaska imports
 from .predict_from_model import make_prediction
 from .get_data_path import get_data_path
+from .utils import BAD_ALIAS
 
 sns.set()
 
@@ -255,6 +256,18 @@ class Alias:
             self.model_parse(df)
         for key, val in self.output.items():
             self.formatted_output.setdefault(val, []).append(key.upper())
+        # check the bad alias list and remove bad aliases from dict
+        # add the bad aliases to the not_found list
+        check_for_bad = []
+        for key in BAD_ALIAS:
+            if key in self.formatted_output:
+                check_for_bad.append(self.formatted_output[key])
+        add_to_not_found = [item for l in check_for_bad for item in l]
+        self.not_found.extend(add_to_not_found)
+        for key in BAD_ALIAS:
+            if key in self.formatted_output:
+                del self.formatted_output[key]
+
         return self.formatted_output, self.not_found
 
     def parse_directory(self, directory):
@@ -298,6 +311,19 @@ class Alias:
                 self.duplicate, self.not_found = [], []
         for key, val in comprehensive_dict.items():
             self.formatted_output.setdefault(val, []).append(key.upper())
+
+        # check the bad alias list and remove bad aliases from dict
+        # add the bad aliases to the not_found list
+        check_for_bad = []
+        for key in BAD_ALIAS:
+            if key in self.formatted_output:
+                check_for_bad.append(self.formatted_output[key])
+        add_to_not_found = [item for l in check_for_bad for item in l]
+        comprehensive_not_found.extend(add_to_not_found)
+        for key in BAD_ALIAS:
+            if key in self.formatted_output:
+                del self.formatted_output[key]
+
         return self.formatted_output, comprehensive_not_found
 
     def heatmap(self):
