@@ -31,7 +31,7 @@ Tests for alaska/utils.py
 from pathlib import Path
 import matplotlib.pyplot as plt
 from ..params import Params
-from ..utils import Dataset, Vocab, show_plot, show_attention_map
+from ..utils import Dataset, Vocab, show_plot, show_attention_map, BAD_ALIAS
 
 
 def test_vocab_add_words():
@@ -210,3 +210,11 @@ def test_show_attention_map():
         pointer_ratio=point_ratio,
     )
     plt.gcf().canvas.draw()
+
+
+def test_bad_alias():
+    """
+    Test the BAD_ALIAS list type and length
+    """
+    assert isinstance(BAD_ALIAS, list)
+    assert len(BAD_ALIAS) < 650
