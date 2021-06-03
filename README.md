@@ -6,7 +6,7 @@ AlasKA is a Python package that reads mnemonics from LAS files and outputs an al
 
 #### Install
 
-To install the package first clone the repository to your local machine. Then `cd` into the repository and create a virtual environment with `conda env create -f environment.yml`. Next activate the environment with `conda activate alaska`. From inside the `alaska` virtual environment run `python setup.py install` and it will install the latest version of `alaska` and all the dependencies except for PyTorch. To install PyTorch go to [https://pytorch.org/](https://pytorch.org/) and select the version of PyTorch that is compatible with your machine. PyTorch is only required if you want to use the pointer generator model to alias mnemonics (~10% of log mnemonics need the pointer generator model).
+To install the package first clone the repository to your local machine. Then `cd` into the repository and create a virtual environment with `conda env create -f environment.yml`. Next activate the environment with `conda activate alaska`. From inside the `alaska` virtual environment and in the `alaska` top-level directory run `pip install .` and it will install the latest version of `alaska` and all the dependencies except for PyTorch. To install PyTorch go to [https://pytorch.org/](https://pytorch.org/) and select the version of PyTorch that is compatible with your machine. PyTorch is only required if you want to use the pointer generator model to alias mnemonics (~10% of log mnemonics need the pointer generator model).
 
 #### Sample Usage
 
