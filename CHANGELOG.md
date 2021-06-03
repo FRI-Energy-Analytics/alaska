@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.5-beta
+* Update README.md and README.ipynb (#74)
+* Create a Not alias list (#73)
+* Add new aliases to comprehensive dict (#72)
+* Update gzip encoding (#70)
+* Update Codecov actions
+* Update CI actions
+* Update README
+* Remove unused code
+
 ## 0.4-beta
 * Add Directory Parse warning (#64)
 * Fixed Parse dir bug (#63)
@@ -28,7 +38,6 @@
 * Merge pull request #23 from FRI-Energy-Analytics/testing
 * Merge pull request #22 from FRI-Energy-Analytics/update_readme
 * Remove travisCI from the repository
-
 
 ## 0.3-beta
 * Create PULL_REQUEST_TEMPLATE
